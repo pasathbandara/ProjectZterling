@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ad82009b-3cab-4f6d-bbfe-681842178fbb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="ad82009b-3cab-4f6d-bbfe-681842178fbb" name="Changes" comment="First Java Code">
+      <change afterPath="$PROJECT_DIR$/PythonTest/PythonTestings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDGP_STUFF.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SDGP_STUFF.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +16,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -38,12 +39,20 @@
     "WebServerToolWindowFactoryState": "false",
     "dart.analysis.tool.window.visible": "false",
     "last_opened_file_path": "F:/Intellij/SDGP_STUFF",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Intellij\SDGP_STUFF" />
+    </key>
+  </component>
   <component name="RunManager">
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Test" />
+    <configuration name="Java.Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Java.Test" />
       <module name="SDGP_STUFF" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -51,7 +60,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.Java.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -63,8 +72,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1675094527460</updated>
-      <workItem from="1675102709197" duration="85000" />
+      <workItem from="1675102709197" duration="370000" />
     </task>
+    <task id="LOCAL-00001" summary="First Java Code">
+      <created>1675102833156</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1675102833156</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -80,5 +97,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First Java Code" />
+    <option name="LAST_COMMIT_MESSAGE" value="First Java Code" />
   </component>
 </project>
