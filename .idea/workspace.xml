@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ad82009b-3cab-4f6d-bbfe-681842178fbb" name="Changes" comment="First Java Code">
-      <change afterPath="$PROJECT_DIR$/PythonTest/PythonTestings.py" afterDir="false" />
+    <list default="true" id="ad82009b-3cab-4f6d-bbfe-681842178fbb" name="Changes" comment="Python Code Added">
+      <change afterPath="$PROJECT_DIR$/R_Language/R_test.R" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +15,7 @@
       <list>
         <option value="Class" />
         <option value="Python Script" />
+        <option value="R Script" />
       </list>
     </option>
   </component>
@@ -27,7 +26,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2L3Krb1pWxzTyniDBGGlvsjEV6N" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -72,7 +73,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1675094527460</updated>
-      <workItem from="1675102709197" duration="370000" />
+      <workItem from="1675102709197" duration="541000" />
     </task>
     <task id="LOCAL-00001" summary="First Java Code">
       <created>1675102833156</created>
@@ -81,7 +82,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675102833156</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Python Code Added">
+      <created>1675103102899</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1675103102899</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Python Code Added">
+      <created>1675103124295</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1675103124295</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,6 +115,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First Java Code" />
-    <option name="LAST_COMMIT_MESSAGE" value="First Java Code" />
+    <MESSAGE value="Python Code Added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Python Code Added" />
   </component>
 </project>
