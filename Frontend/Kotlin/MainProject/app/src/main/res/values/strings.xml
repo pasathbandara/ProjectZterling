@@ -2,5 +2,10 @@
     <string name="app_name">My Application</string>
     <string name="projectz">PROJECT ZTERLING</string>
     <string name="readbtn">Start Reading</string>
-    <string name="quote">\"See your truth\"</string>
+    <string name="quote">See your truth</string>
+    <string name="name">John Doe</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+<!--    <string name="drawerLayout" type="id">drawerLayout</string>-->
+    <string name="actvity_1">Actvity 1</string>
 </resources>
