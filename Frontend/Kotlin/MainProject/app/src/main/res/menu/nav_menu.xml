@@ -4,74 +4,80 @@
     tools:showIn="Navigation_view">
 
     <item
-    android:id="@+id/nav_home"
+    android:id="@+id/nav_lates"
     android:title="Home"
     android:icon="@drawable/baseline_home_24"/>
 
     <item
-    android:id="@+id/nav_login"
+    android:id="@+id/nav_top"
     android:title="Login"
     android:icon="@drawable/baseline_login_24"/>
 
     <item
-    android:id="@+id/nav_settings"
+    android:id="@+id/nav_factcheck"
     android:title="Settings"
     android:icon="@drawable/baseline_settings_24"/>
 
     <item
-    android:id="@+id/nav_rating"
+    android:id="@+id/nav_stories"
     android:title="Rating"
     android:icon="@drawable/baseline_star_rate_24"/>
 
     <item
-    android:id="@+id/nav_profile"
+    android:id="@+id/nav_faq"
     android:title="profile"
     android:icon="@drawable/baseline_face_24"/>
 
     <item
-        android:id="@+id/nav_share"
-        android:title="Share"
-        android:icon="@drawable/baseline_share_24"/>
+        android:id="@+id/nav_language"
+        android:title="Language"
+        android:icon="@drawable/baseline_face_24"/>
 
-    <item android:title="Profile">
-        <menu>
-            <item
-                android:id="@+id/nav_profile"
-                android:title="profile"
-                android:icon="@drawable/baseline_face_24"/>
-        </menu>
-    </item>
+<!--    Smaller Menu-->
+<!--    <item-->
+<!--        android:id="@+id/nav_settings"-->
+<!--        android:title="Share"-->
+<!--        android:icon="@drawable/baseline_share_24"/>-->
 
-    <item android:title="Rate">
-        <menu>
-            <item
-                android:id="@+id/nav_rating"
-                android:title="Rating"
-                android:icon="@drawable/baseline_star_rate_24"/>
-        </menu>
-    </item>
+<!--    <item android:title="Profile">-->
+<!--        <menu>-->
+<!--            <item-->
+<!--                android:id="@+id/nav_faq"-->
+<!--                android:title="profile"-->
+<!--                android:icon="@drawable/baseline_face_24"/>-->
+<!--        </menu>-->
+<!--    </item>-->
 
-    <item android:title="Login">
-        <menu>
-            <item
-                android:id="@+id/nav_login"
-                android:title="Login"
-                android:icon="@drawable/baseline_face_24"/>
-        </menu>
-    </item>
+<!--    <item android:title="Rate">-->
+<!--        <menu>-->
+<!--            <item-->
+<!--                android:id="@+id/nav_stories"-->
+<!--                android:title="Rating"-->
+<!--                android:icon="@drawable/baseline_star_rate_24"/>-->
+<!--        </menu>-->
+<!--    </item>-->
 
-    <item android:title="Communication">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:title="Share"
-                android:icon="@drawable/baseline_share_24"/>
-            <item
-                android:id="@+id/nav_rating"
-                android:title="Rate It"
-                android:icon="@drawable/baseline_star_rate_24"/>
-        </menu>
-    </item>
+<!--    <item android:title="Login">-->
+<!--        <menu>-->
+<!--            <item-->
+<!--                android:id="@+id/nav_top"-->
+<!--                android:title="Login"-->
+<!--                android:icon="@drawable/baseline_face_24"/>-->
+<!--        </menu>-->
+<!--    </item>-->
+
+<!--    <item android:title="Communication">-->
+<!--        <menu>-->
+<!--            <item-->
+<!--                android:id="@+id/nav_settings"-->
+<!--                android:title="Share"-->
+<!--                android:icon="@drawable/baseline_share_24"/>-->
+<!--            <item-->
+<!--                android:id="@+id/nav_stories"-->
+<!--                android:title="Rate It"-->
+<!--                android:icon="@drawable/baseline_star_rate_24"/>-->
+<!--        </menu>-->
+<!--    </item>-->
 
 
 </menu>
