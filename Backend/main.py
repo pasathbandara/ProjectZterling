@@ -2,9 +2,10 @@ import joblib
 import string 
 from nltk.corpus import stopwords
 
-#Collecting User Text
-user_input = input(str("Please enter the news content you want to verify: "))
-print("You entered:  " + str(user_input))
+# If the application is to be tested only using console input;
+# #Collecting User Text
+# user_input = input(str("Please enter the news content you want to verify: "))
+# print("You entered:  " + str(user_input))
 
 
 def process_text(s):
@@ -19,9 +20,29 @@ def process_text(s):
     clean_string = [word for word in nopunc.split() if word.lower() not in stopwords.words('english')]
     return clean_string
 
+# url is the input given in the frontend for the relevant textfield
+
+url = "https://www.hindustantimes.com/cricket/virat-kohli-ends-century-drought-smashes-maiden-t20i-ton-in-india-vs-afghanistan-asia-cup-super-4-match-101662649555677.html"
+headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'}
+html = requests.get(url, headers=headers)
+script = BeautifulSoup(html.content, "html.parser")
+parsed_uri = urllib.request.urlparse(url)
+domainName = '{uri.netloc}'.format(uri=parsed_uri)
+news_title = script.find("title").text
+
+# news is the input given in the frontend for the relevant textArea which is the news content
+
+news = '''Virat Kohli reached his first international century since November 2019, as he reached the three-figure mark against Afghanistan in Asia Cup 2022. Team India's star batter Virat Kohli ended the wait for an international century, reaching the three-figure mark against Afghanistan in the Asia Cup Super 4 match in Dubai. Kohli reached his hundred in 53 balls, continuing on his impressive run of form since his return to Team India in the continental tournament. Before the century knock, Kohli had scored two fifties in the Asia Cup as well (59* against Hong Kong and 60 against Pakistan). Kohli's last century in international cricket came in November 2019 against Bangladesh; last month, the batter had endured a thousand days without a ton. The century against Afghanistan was Kohli's 71st international hundred, as he equalled Australia's batting great Ricky Ponting. Only Sachin Tendulkar (100 international centuries) stays ahead of the former India captain now.
+
+In the game against Afghanistan, Kohli opened the innings alongside stand-in skipper KL Rahul as Rohit Sharma was given rest in the game. This was the first time Kohli came as an opener in T20Is since March 2021, when he had forged a brilliant 94-run stand with Rohit; it was an even better outing for the former Indian captain this time, as he forged a 119-run stand with Rahul, who also scored a much-needed half-century (62 off 40 deliveries). Kohli began aggressively in his knock, racing to his half-century in 32 deliveries. Following the quick dismissals of Rahul and Suryakumar Yadav (6), the 33-year-old batter readjusted his game alongside Rishabh Pant, resorting to singles and doubles through the middle-overs before upping the ante against Afghanistan pacers. He eventually reached his century in the 19th over of the game with a six against Fareed Ahmed – this was his maiden T20I hundred.
+
+Kohli eventually remained unbeaten on 122 runs off 61 deliveries, smashing 12 fours and six sixes en route to his century knock.'''
+
+full_content = news_title + " " + news
 
 detector_pipeline = joblib.load("detector_pipeline.joblib")
-result = detector_pipeline.predict([['''''']])
+result = detector_pipeline.predict([[full_content]])
+print(result[0])
 
-print(result)
+# Code to update csv file for continous model training, but should write seperate .py or .ipynb file for update_model, So the dataset would be updated and available for commercial use
     
