@@ -1,6 +1,12 @@
 import joblib
-import string 
+import string
 from nltk.corpus import stopwords
+import requests
+from bs4 import BeautifulSoup
+from urllib.request import urlopen
+import urllib
+import pandas as pd
+import os
 
 # If the application is to be tested only using console input;
 # #Collecting User Text
@@ -46,3 +52,30 @@ print(result[0])
 
 # Code to update csv file for continous model training, but should write seperate .py or .ipynb file for update_model, So the dataset would be updated and available for commercial use
     
+# Getting Data to save in the database
+identifier = domainName + " " + news_title
+data = {
+    "title":[news_title],
+    "text":[news],
+    "domain":[domainName],
+    "Validity":[result[0]],
+    "Identifier":[identifier]
+}
+df = pd.DataFrame(data)
+
+if(os.path.isfile("Database/All_DB.csv")):
+    df_existing = pd.read_csv("Database/All_DB.csv")
+    alreadyExists = (identifier == df_existing["Identifier"]).any()
+else:
+    alreadyExists = False
+
+# ALSO, if there is no identifier, (user doesnt input a URL), then should it be added to the Database?
+
+# write/append data frame to CSV files
+if(not alreadyExists):    # Check for duplicates
+    df.to_csv("Database/All_DB.csv", mode="a", index=False, header=not os.path.isfile("Database/All_DB.csv"))
+
+    if(result[0] == "True"):
+        df.to_csv("Database/True_DB.csv", mode="a", index=False, header=not os.path.isfile("Database/True_DB.csv"))
+    elif(result[0] == "Fake"):
+        df.to_csv("Database/Fake_DB.csv", mode="a", index=False, header=not os.path.isfile("Database/Fake_DB.csv"))
