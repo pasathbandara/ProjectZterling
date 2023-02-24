@@ -8,12 +8,6 @@ import urllib
 import pandas as pd
 import os
 
-# If the application is to be tested only using console input;
-# #Collecting User Text
-# user_input = input(str("Please enter the news content you want to verify: "))
-# print("You entered:  " + str(user_input))
-
-
 def process_text(s):
 
     #Check Punctuation
@@ -24,7 +18,7 @@ def process_text(s):
 
     #Converting Strings to Lowercase and Removing stopwords
     clean_string = [word for word in nopunc.split() if word.lower() not in stopwords.words('english')]
-    return clean_string
+    return clean_string 
 
 # url is the input given in the frontend for the relevant textfield
 
@@ -48,7 +42,12 @@ full_content = news_title + " " + news
 
 detector_pipeline = joblib.load("detector_pipeline.joblib")
 result = detector_pipeline.predict([[full_content]])
+rating = detector_pipeline.predict_proba([[full_content]])
 print(result[0])
+# print(rating)     ## Prints two values 1.Probability of the news being Fake, 2. Probability of the news being True, P(F)+P(T)=1
+print(rating[0][1])     ## Prints the Probability of the news being True which can be used for the rating
+reliability_rating = rating[0][1]*5
+print(reliability_rating)
 
 # Code to update csv file for continous model training, but should write seperate .py or .ipynb file for update_model, So the dataset would be updated and available for commercial use
     
@@ -59,7 +58,8 @@ data = {
     "text":[news],
     "domain":[domainName],
     "Validity":[result[0]],
-    "Identifier":[identifier]
+    "Identifier":[identifier],
+    "Rating/5":[reliability_rating]
 }
 df = pd.DataFrame(data)
 
