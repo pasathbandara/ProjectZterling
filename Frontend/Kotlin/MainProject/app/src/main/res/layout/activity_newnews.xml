@@ -20,7 +20,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Project Z"
+                android:text="@string/project_z"
                 android:textColor="@color/black"
                 android:textSize="24sp"
                 android:textStyle="bold">
@@ -46,23 +46,23 @@
             android:id="@+id/top"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Top">
+            android:text="@string/top">
         </com.google.android.material.tabs.TabItem>
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/sorts"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sports">
+            android:text="@string/sports">
         </com.google.android.material.tabs.TabItem>
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/factc"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="fact c">
+            android:text="@string/fact_c">
         </com.google.android.material.tabs.TabItem>
 
-    </com.google.android.material.tabs.TabLayout>
+<!--    </com.google.android.material.tabs.TabLayout>-->
 
 </RelativeLayout>

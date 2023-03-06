@@ -9,4 +9,8 @@
     <!--    <string name="drawerLayout" type="id">drawerLayout</string>-->
     <string name="actvity_1">Actvity 1</string>
     <string name="actvity_2">Project Z</string>
+    <string name="project_z">Project Z</string>
+    <string name="sports">Sports</string>
+    <string name="fact_c">fact c</string>
+    <string name="top">Top</string>
 </resources>
