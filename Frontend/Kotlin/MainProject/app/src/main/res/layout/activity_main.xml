@@ -6,6 +6,7 @@
     android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#16161D"
     tools:context=".MainPage">
 
     <com.google.android.material.navigation.NavigationView
@@ -58,22 +59,25 @@
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toTopOf="@+id/divider2"
             app:layout_constraintTop_toBottomOf="@+id/divider"
-            app:layout_constraintVertical_bias="0.742"
+            app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/checker"
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="229dp" />
+            tools:layout_editor_absoluteX="227dp" />
 
         <ImageButton
             android:id="@+id/imageButton1"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="11dp"
+            android:layout_marginEnd="55dp"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toTopOf="@+id/divider2"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton3"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/divider"
-            app:layout_constraintVertical_bias="0.742"
+            app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/paper"
             tools:ignore="MissingConstraints" />
 
@@ -82,12 +86,13 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginTop="11dp"
-            android:layout_marginEnd="12dp"
+            android:layout_marginEnd="16dp"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toTopOf="@+id/divider2"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageButton2"
             app:layout_constraintTop_toBottomOf="@+id/divider"
-            app:layout_constraintVertical_bias="0.742"
+            app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/contact"
             tools:ignore="MissingConstraints" />
 
@@ -96,13 +101,14 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginTop="11dp"
+            android:layout_marginEnd="48dp"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toTopOf="@+id/divider2"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton2"
             app:layout_constraintTop_toBottomOf="@+id/divider"
-            app:layout_constraintVertical_bias="0.742"
+            app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/top"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="112dp" />
+            tools:ignore="MissingConstraints" />
 
         <ImageView
             android:id="@+id/newlogo"
@@ -121,41 +127,48 @@
             app:srcCompat="@drawable/logo"
             tools:ignore="MissingConstraints" />
 
+
         <Button
             android:id="@+id/button"
             android:layout_width="73dp"
             android:layout_height="43dp"
+            android:layout_marginEnd="58dp"
             android:text="All"
-            tools:layout_editor_absoluteX="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/button2"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteY="186dp" />
-
-        <Space
-            android:layout_width="58dp"
-            android:layout_height="48dp"
-            tools:layout_editor_absoluteX="93dp"
-            tools:layout_editor_absoluteY="181dp" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="73dp"
             android:layout_height="43dp"
+            android:layout_marginEnd="58dp"
             android:text="Real"
-            tools:layout_editor_absoluteX="151dp"
+            app:layout_constraintEnd_toStartOf="@+id/button3"
             tools:layout_editor_absoluteY="186dp" />
-
-        <Space
-            android:layout_width="58dp"
-            android:layout_height="48dp"
-            tools:layout_editor_absoluteX="224dp"
-            tools:layout_editor_absoluteY="181dp" />
 
         <Button
             android:id="@+id/button3"
             android:layout_width="73dp"
             android:layout_height="43dp"
+            android:layout_marginEnd="36dp"
             android:text="Fake"
-            tools:layout_editor_absoluteX="282dp"
+            app:layout_constraintEnd_toEndOf="parent"
             tools:layout_editor_absoluteY="186dp" />
+
+        <ImageView
+            android:id="@+id/temp"
+            android:layout_width="355dp"
+            android:layout_height="157dp"
+            android:layout_marginStart="93dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="118dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.419"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider3"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.drawerlayout.widget.DrawerLayout>
