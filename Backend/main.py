@@ -19,16 +19,62 @@ def process_text(s):
     #Converting Strings to Lowercase and Removing stopwords
     clean_string = [word for word in nopunc.split() if word.lower() not in stopwords.words('english')]
     return clean_string 
+    
+def validate_news(url, news):
+    headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'}
+    html = requests.get(url, headers=headers)
+    script = BeautifulSoup(html.content, "html.parser")
+    parsed_uri = urllib.request.urlparse(url)
+    domainName = '{uri.netloc}'.format(uri=parsed_uri)
+    news_title = script.find("title").text
+
+    full_content = news_title + " " + news
+
+    detector_pipeline = joblib.load("detector_pipeline.joblib")
+    result = detector_pipeline.predict([[full_content]])
+    rating = detector_pipeline.predict_proba([[full_content]])
+    # print(result[0])
+    # print(rating)     ## Prints two values 1.Probability of the news being Fake, 2. Probability of the news being True, P(F)+P(T)=1
+    # print(rating[0][1])     ## Prints the Probability of the news being True which can be used for the rating
+    reliability_rating = rating[0][1]*5
+    # print(reliability_rating)
+
+    # Code to update csv file for continous model training, but should write seperate .py or .ipynb file for update_model, So the dataset would be updated and available for commercial use
+        
+    # Getting Data to save in the database
+    identifier = domainName + " " + news_title
+    data = {
+        "title":[news_title],
+        "text":[news],
+        "domain":[domainName],
+        "Validity":[result[0]],
+        "Identifier":[identifier],
+        "Rating/5":[reliability_rating]
+    }
+    df = pd.DataFrame(data)
+
+    if(os.path.isfile("Database/All_DB.csv")):
+        df_existing = pd.read_csv("Database/All_DB.csv")
+        alreadyExists = (identifier == df_existing["Identifier"]).any()
+    else:
+        alreadyExists = False
+
+    # write/append data frame to CSV files
+    if(not alreadyExists):    # Check for duplicates
+        df.to_csv("Database/All_DB.csv", mode="a", index=False, header=not os.path.isfile("Database/All_DB.csv"))
+
+        if(result[0] == "True"):
+            df.to_csv("Database/True_DB.csv", mode="a", index=False, header=not os.path.isfile("Database/True_DB.csv"))
+        elif(result[0] == "Fake"):
+            df.to_csv("Database/Fake_DB.csv", mode="a", index=False, header=not os.path.isfile("Database/Fake_DB.csv"))
+
+    return result[0], reliability_rating
+
 
 # url is the input given in the frontend for the relevant textfield
 
 url = "https://www.hindustantimes.com/cricket/virat-kohli-ends-century-drought-smashes-maiden-t20i-ton-in-india-vs-afghanistan-asia-cup-super-4-match-101662649555677.html"
-headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'}
-html = requests.get(url, headers=headers)
-script = BeautifulSoup(html.content, "html.parser")
-parsed_uri = urllib.request.urlparse(url)
-domainName = '{uri.netloc}'.format(uri=parsed_uri)
-news_title = script.find("title").text
+
 
 # news is the input given in the frontend for the relevant textArea which is the news content
 
@@ -38,44 +84,7 @@ In the game against Afghanistan, Kohli opened the innings alongside stand-in ski
 
 Kohli eventually remained unbeaten on 122 runs off 61 deliveries, smashing 12 fours and six sixes en route to his century knock.'''
 
-full_content = news_title + " " + news
+result ,reliability_rating = validate_news(url, news)
 
-detector_pipeline = joblib.load("detector_pipeline.joblib")
-result = detector_pipeline.predict([[full_content]])
-rating = detector_pipeline.predict_proba([[full_content]])
-print(result[0])
-# print(rating)     ## Prints two values 1.Probability of the news being Fake, 2. Probability of the news being True, P(F)+P(T)=1
-print(rating[0][1])     ## Prints the Probability of the news being True which can be used for the rating
-reliability_rating = rating[0][1]*5
+print(result)
 print(reliability_rating)
-
-# Code to update csv file for continous model training, but should write seperate .py or .ipynb file for update_model, So the dataset would be updated and available for commercial use
-    
-# Getting Data to save in the database
-identifier = domainName + " " + news_title
-data = {
-    "title":[news_title],
-    "text":[news],
-    "domain":[domainName],
-    "Validity":[result[0]],
-    "Identifier":[identifier],
-    "Rating/5":[reliability_rating]
-}
-df = pd.DataFrame(data)
-
-if(os.path.isfile("Database/All_DB.csv")):
-    df_existing = pd.read_csv("Database/All_DB.csv")
-    alreadyExists = (identifier == df_existing["Identifier"]).any()
-else:
-    alreadyExists = False
-
-# ALSO, if there is no identifier, (user doesnt input a URL), then should it be added to the Database?
-
-# write/append data frame to CSV files
-if(not alreadyExists):    # Check for duplicates
-    df.to_csv("Database/All_DB.csv", mode="a", index=False, header=not os.path.isfile("Database/All_DB.csv"))
-
-    if(result[0] == "True"):
-        df.to_csv("Database/True_DB.csv", mode="a", index=False, header=not os.path.isfile("Database/True_DB.csv"))
-    elif(result[0] == "Fake"):
-        df.to_csv("Database/Fake_DB.csv", mode="a", index=False, header=not os.path.isfile("Database/Fake_DB.csv"))
