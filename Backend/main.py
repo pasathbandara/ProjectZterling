@@ -98,3 +98,5 @@ def retrieve_news(path):
     except FileNotFoundError:
         # return empty list if file doesnt exist (means that the database is empty)
         return[]
+
+#Create Login page verification
