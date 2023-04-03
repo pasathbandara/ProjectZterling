@@ -34,7 +34,7 @@
             android:name=".contact_us"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".MainActivity1"
             android:exported="false">
         </activity>
     </application>

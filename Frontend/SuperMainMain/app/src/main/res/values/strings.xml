@@ -12,4 +12,5 @@
     <string name="howto_step2">fill this with step 2</string>
     <string name="howto_step3">fill this with step 3</string>
     <string name="enterwebsite">Enter your news website</string>
+    <string name="true_false">_tf</string>
 </resources>
