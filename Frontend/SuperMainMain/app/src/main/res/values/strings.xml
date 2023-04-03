@@ -1,8 +1,9 @@
 <resources>
-    <string name="app_name">Project Z</string>
+<!--    <string name="app_name">sdgptest2</string>-->
+    <string name="app_name">Project Zterling</string>
+    <string name="projectz">PROJECT ZTERLING</string>
     <string name="readbtn">Start Reading</string>
     <string name="quote">See your truth</string>
-
     <string name="name">Menu</string>
     <string name="open">open</string>
     <string name="close">close</string>
@@ -11,5 +12,4 @@
     <string name="howto_step2">fill this with step 2</string>
     <string name="howto_step3">fill this with step 3</string>
     <string name="enterwebsite">Enter your news website</string>
-
 </resources>
