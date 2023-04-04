@@ -58,10 +58,13 @@ def validate_news(url, news):
     }
     df = pd.DataFrame(data)
 
-    if(os.path.isfile("Frontend/SuperMainMain/app/src/main/python/Database/All_DB.csv")):
-        df_existing = pd.read_csv("Frontend/SuperMainMain/app/src/main/python/Database/All_DB.csv")
-        alreadyExists = (identifier == df_existing["Identifier"]).any()
-    else:
+    try: 
+        if(os.path.isfile("Frontend/SuperMainMain/app/src/main/python/Database/All_DB.csv")):
+            df_existing = pd.read_csv("Frontend/SuperMainMain/app/src/main/python/Database/All_DB.csv")
+            alreadyExists = (identifier == df_existing["Identifier"]).any()
+        else:
+            alreadyExists = False
+    except:
         alreadyExists = False
 
     # write/append data frame to CSV files
