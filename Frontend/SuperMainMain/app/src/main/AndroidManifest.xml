@@ -12,6 +12,9 @@
         android:theme="@style/Theme.Sdgptest2"
         tools:targetApi="31">
         <activity
+            android:name=".ManithDetails"
+            android:exported="false" />
+        <activity
             android:name=".SaicharanDetails"
             android:exported="false" />
         <activity
