@@ -1,5 +1,5 @@
 <resources>
-<!--    <string name="app_name">sdgptest2</string>-->
+    <!--    <string name="app_name">sdgptest2</string>-->
     <string name="app_name">Project Zterling</string>
     <string name="projectz">PROJECT ZTERLING</string>
     <string name="readbtn">Start Reading</string>
