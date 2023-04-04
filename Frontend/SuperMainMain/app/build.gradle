@@ -39,7 +39,7 @@ android {
                 install "requests"
                 install "bs4"
 //                from bs4 import BeautifulSoup
-                install "urllib"
+//                install "urllib"
 //                from urllib.request import urlopen
                 install "pandas"
 //                import pandas as pd
