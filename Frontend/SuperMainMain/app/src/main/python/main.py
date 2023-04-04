@@ -35,7 +35,7 @@ def validate_news(url, news):
     full_content = news_title + " " + news
 
     # detector_pipeline = joblib.load("Backend/detector_pipeline.joblib")
-    detector_pipeline = joblib.load("python/detector_pipeline.joblib")
+    detector_pipeline = joblib.load("Frontend/SuperMainMain/app/src/main/python/detector_pipeline.joblib")
     result = detector_pipeline.predict([[full_content]])
     rating = detector_pipeline.predict_proba([[full_content]])
     # print(result[0])
@@ -58,33 +58,33 @@ def validate_news(url, news):
     }
     df = pd.DataFrame(data)
 
-    if(os.path.isfile("python/Database/All_DB.csv")):
-        df_existing = pd.read_csv("python/Database/All_DB.csv")
+    if(os.path.isfile("Frontend/SuperMainMain/app/src/main/python/Database/All_DB.csv")):
+        df_existing = pd.read_csv("Frontend/SuperMainMain/app/src/main/python/Database/All_DB.csv")
         alreadyExists = (identifier == df_existing["Identifier"]).any()
     else:
         alreadyExists = False
 
     # write/append data frame to CSV files
     if(not alreadyExists):    # Check for duplicates
-        df.to_csv("python/Database/All_DB.csv", mode="a", index=False, header=not os.path.isfile("python/Database/All_DB.csv"))
+        df.to_csv("Frontend/SuperMainMain/app/src/main/python/Database/All_DB.csv", mode="a", index=False, header=not os.path.isfile("python/Database/All_DB.csv"))
 
         if(result[0] == "True"):
-            df.to_csv("python/Database/True_DB.csv", mode="a", index=False, header=not os.path.isfile("python/Database/True_DB.csv"))
+            df.to_csv("Frontend/SuperMainMain/app/src/main/python/Database/True_DB.csv", mode="a", index=False, header=not os.path.isfile("python/Database/True_DB.csv"))
         elif(result[0] == "Fake"):
-            df.to_csv("python/Database/Fake_DB.csv", mode="a", index=False, header=not os.path.isfile("python/Database/Fake_DB.csv"))
+            df.to_csv("Frontend/SuperMainMain/app/src/main/python/Database/Fake_DB.csv", mode="a", index=False, header=not os.path.isfile("python/Database/Fake_DB.csv"))
 
     return result[0], reliability_rating
 
 def retrieve_all_news():
-    all_news_list = retrieve_news("python/Database/All_DB.csv")
+    all_news_list = retrieve_news("Frontend/SuperMainMain/app/src/main/python/Database/All_DB.csv")
     return all_news_list
 
 def retrieve_true_news():
-    true_news_list = retrieve_news("python/Database/True_DB.csv")
+    true_news_list = retrieve_news("Frontend/SuperMainMain/app/src/main/python/Database/True_DB.csv")
     return true_news_list
 
 def retrieve_fake_news():
-    fake_news_list = retrieve_news("python/Database/Fake_DB.csv")
+    fake_news_list = retrieve_news("Frontend/SuperMainMain/app/src/main/python/Database/Fake_DB.csv")
     return fake_news_list
 
 def retrieve_news(path):
