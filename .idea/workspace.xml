@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
+    <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad82009b-3cab-4f6d-bbfe-681842178fbb" name="Changes" comment="Saicharan 1st commit" />
+    <list default="true" id="ad82009b-3cab-4f6d-bbfe-681842178fbb" name="Changes" comment="Saicharan 1st commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/SuperMainMain/app/src/main/res/layout/activity_contact_us.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/SuperMainMain/app/src/main/res/layout/activity_contact_us.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,7 +42,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "cidr.known.project.marker": "true",
-    "last_opened_file_path": "F:/SDGP/SDGP_Stuff/Frontend/Kotlin/MainProject"
+    "last_opened_file_path": "C:/Users/saini/Desktop/New folder/SDGP_Stuff/Frontend/SuperMainMain"
   }
 }]]></component>
   <component name="RecentsManager">
