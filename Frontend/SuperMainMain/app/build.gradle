@@ -33,6 +33,18 @@ android {
 
             pip {
                 install "numpy"
+                install "string"
+                install "nltk"
+//                install from nltk.corpus import stopwords
+                install "requests"
+                install "bs4"
+//                from bs4 import BeautifulSoup
+                install "urllib"
+//                from urllib.request import urlopen
+                install "pandas"
+//                import pandas as pd
+                install "os"
+                install "csv"
             }
         }
 
