@@ -1,10 +1,12 @@
 import unittest
 import main
 import string
+import nltk
 from nltk.corpus import stopwords
 
 def process_text(s):
     #Check Punctuation
+    nltk.download('stopwords')
     nopunc =[char for char in s if char not in string.punctuation]
 
     # Join the characters  without punctuation
