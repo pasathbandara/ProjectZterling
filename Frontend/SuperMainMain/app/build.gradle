@@ -31,11 +31,9 @@ android {
 //            buildPython "C:/Users/MSI/AppData/Local/Programs/Python/Python310"
             buildPython "python3"
 
-//            pip {
-//                install "numpy"
-//                install "pandas"
-//                install "joblib"
-//            }
+            pip {
+                install "numpy"
+            }
         }
 
         ndk {
