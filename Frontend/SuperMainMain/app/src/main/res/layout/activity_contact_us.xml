@@ -114,7 +114,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_bar"
         app:layout_constraintVertical_bias="0.187"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/nikesha" />
 
     <ImageView
         android:id="@+id/person1"
@@ -143,7 +143,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_bar"
         app:layout_constraintVertical_bias="1.0"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/saicharan" />
 
     <ImageView
         android:id="@+id/person3"
@@ -169,7 +169,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_bar"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/manith" />
 
     <TextView
         android:id="@+id/textView6"
