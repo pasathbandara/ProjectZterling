@@ -33,7 +33,7 @@ android {
 
             pip {
                 install "numpy"
-                install "string"
+//                install "string"
                 install "nltk"
 //                install from nltk.corpus import stopwords
                 install "requests"
@@ -43,8 +43,8 @@ android {
 //                from urllib.request import urlopen
                 install "pandas"
 //                import pandas as pd
-                install "os"
-                install "csv"
+//                install "os"
+//                install "csv"
             }
         }
 
