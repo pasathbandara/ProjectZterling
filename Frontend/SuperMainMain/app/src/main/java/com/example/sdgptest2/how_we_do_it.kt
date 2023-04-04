@@ -17,6 +17,34 @@ class how_we_do_it : AppCompatActivity() {
         actionBtn.setOnClickListener(){
             println("hi")
         }
+        val newNews = findViewById<ImageButton>(R.id.newnews)
+        newNews.setOnClickListener(){
+            val Intent = Intent(this, MainPage::class.java)
+            println("hi")
+            startActivity(Intent)
+            finish()
+        }
+        val latestNews = findViewById<ImageButton>(R.id.latestnews)
+        latestNews.setOnClickListener(){
+            val Intent = Intent(this, MainPage::class.java)
+            println("hi")
+            startActivity(Intent)
+            finish()
+        }
+        val factCheck = findViewById<ImageButton>(R.id.factcheck)
+        factCheck.setOnClickListener(){
+            val Intent = Intent(this, how_we_do_it::class.java)
+            println("hi")
+            startActivity(Intent)
+            finish()
+        }
+        val contactUs = findViewById<ImageButton>(R.id.contact)
+        factCheck.setOnClickListener(){
+            val Intent = Intent(this, contact_us::class.java)
+            println("hi")
+            startActivity(Intent)
+            finish()
+        }
     }
 
 }

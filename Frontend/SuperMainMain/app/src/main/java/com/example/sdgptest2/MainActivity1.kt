@@ -27,7 +27,6 @@ class MainActivity1 : AppCompatActivity() {
             println("hi")
         }
 
-        button2 = findViewById<View>(R.id.button2) as Button
         true_false = findViewById<View>(R.id.true_false) as TextView
         if (!Python.isStarted()) Python.start(AndroidPlatform(this))
         val py = Python.getInstance()
