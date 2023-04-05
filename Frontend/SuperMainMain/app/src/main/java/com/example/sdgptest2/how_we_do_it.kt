@@ -10,7 +10,6 @@ import android.widget.ImageButton
 import android.widget.TextView
 import com.chaquo.python.PyObject
 import com.chaquo.python.Python
-import com.chaquo.python.Python.*
 import com.chaquo.python.android.AndroidPlatform
 
 class how_we_do_it : AppCompatActivity() {
