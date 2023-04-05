@@ -12,13 +12,6 @@
         android:background="@drawable/fake_news_background_image_"
         tools:context=".contact_us">
 
-
-
-
-
-
-
-
         <TextView
             android:id="@+id/logo_bar"
             android:layout_width="412dp"
@@ -72,7 +65,7 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <ImageButton
-            android:id="@+id/imageButton7"
+            android:id="@+id/contcont"
             android:layout_width="52dp"
             android:layout_height="52dp"
             android:layout_marginTop="10dp"
@@ -87,14 +80,14 @@
             tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
-            android:id="@+id/imageButton5"
+            android:id="@+id/contlatestnews"
             android:layout_width="52dp"
             android:layout_height="52dp"
             android:layout_marginTop="12dp"
             android:layout_marginEnd="40dp"
             android:layout_marginBottom="612dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/imageButton6"
+            app:layout_constraintEnd_toStartOf="@+id/contfactcheck"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/btn_bar"
             app:layout_constraintTop_toBottomOf="@+id/imageView"
@@ -103,7 +96,7 @@
             tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
-            android:id="@+id/imageButton4"
+            android:id="@+id/contnews"
             android:layout_width="52dp"
             android:layout_height="52dp"
             android:layout_marginStart="48dp"
@@ -111,7 +104,7 @@
             android:layout_marginEnd="36dp"
             android:layout_marginBottom="612dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/imageButton5"
+            app:layout_constraintEnd_toStartOf="@+id/contlatestnews"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/btn_bar"
             app:layout_constraintTop_toBottomOf="@+id/imageView"
@@ -119,14 +112,14 @@
             tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
-            android:id="@+id/imageButton6"
+            android:id="@+id/contfactcheck"
             android:layout_width="52dp"
             android:layout_height="52dp"
             android:layout_marginTop="12dp"
             android:layout_marginEnd="44dp"
             android:layout_marginBottom="612dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/imageButton7"
+            app:layout_constraintEnd_toStartOf="@+id/contcont"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView"
@@ -135,22 +128,22 @@
             tools:ignore="SpeakableTextPresentCheck" />
 
         <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/person3"
+            android:id="@+id/yasibtn"
             android:layout_width="121dp"
             android:layout_height="150dp"
             android:background="@drawable/yasindu"
             android:foregroundGravity="center"
             android:scaleType="fitXY"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/person"
+            app:layout_constraintEnd_toStartOf="@+id/nikibtn"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/person1"
+            app:layout_constraintTop_toBottomOf="@+id/pasathbtn"
             app:layout_constraintVertical_bias="0.277"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/person"
+            android:id="@+id/nikibtn"
             android:layout_width="120dp"
             android:layout_height="150dp"
             android:background="@drawable/nikesha"
@@ -160,12 +153,12 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.852"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/person2"
+            app:layout_constraintTop_toBottomOf="@+id/manithbtn"
             app:layout_constraintVertical_bias="0.277"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/person2"
+            android:id="@+id/manithbtn"
             android:layout_width="109dp"
             android:layout_height="135dp"
             android:layout_marginTop="80dp"
@@ -175,13 +168,13 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/person4"
+            app:layout_constraintStart_toEndOf="@+id/saichbtn"
             app:layout_constraintTop_toBottomOf="@+id/textView6"
             app:layout_constraintVertical_bias="0.0"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
-            android:id="@+id/person1"
+            android:id="@+id/pasathbtn"
             android:layout_width="110dp"
             android:layout_height="135dp"
             android:layout_marginTop="80dp"
@@ -189,7 +182,7 @@
             android:foregroundGravity="center"
             android:scaleType="fitXY"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/person4"
+            app:layout_constraintEnd_toStartOf="@+id/saichbtn"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView6"
@@ -197,7 +190,7 @@
             tools:ignore="SpeakableTextPresentCheck" />
 
         <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/person4"
+            android:id="@+id/saichbtn"
             android:layout_width="109dp"
             android:layout_height="134dp"
             android:layout_marginTop="80dp"
@@ -205,9 +198,9 @@
             android:foregroundGravity="center"
             android:scaleType="fitXY"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/person2"
+            app:layout_constraintEnd_toStartOf="@+id/manithbtn"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/person1"
+            app:layout_constraintStart_toEndOf="@+id/pasathbtn"
             app:layout_constraintTop_toBottomOf="@+id/textView6"
             app:layout_constraintVertical_bias="0.0"
             tools:ignore="SpeakableTextPresentCheck" />
