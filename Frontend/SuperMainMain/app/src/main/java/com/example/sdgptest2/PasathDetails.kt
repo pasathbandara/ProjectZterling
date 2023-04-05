@@ -14,6 +14,12 @@ class PasathDetails : AppCompatActivity() {
             val intent = Intent(this, contact_us::class.java)
             startActivity(intent)
         }
+
+        val burgmenu = findViewById<android.view.View>(R.id.burgmenu)
+        burgmenu.setOnClickListener {
+            val intent = Intent(this, burgerMenu::class.java)
+            startActivity(intent)
+        }
     }
 
 }

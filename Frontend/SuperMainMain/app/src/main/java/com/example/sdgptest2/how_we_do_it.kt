@@ -39,7 +39,7 @@ class how_we_do_it : AppCompatActivity() {
                 println(obj)
             }
         }
-        val newNews = findViewById<ImageButton>(R.id.newnews)
+        val newNews = findViewById<ImageButton>(R.id.newsnews)
         newNews.setOnClickListener(){
             val Intent = Intent(this, MainPage::class.java)
             println("hi")

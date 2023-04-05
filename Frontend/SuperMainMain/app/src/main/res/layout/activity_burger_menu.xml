@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".burgerMenu">
+
+    <TextView
+        android:id="@+id/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="49dp"
+        android:layout_marginEnd="177dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Menu"
+        android:textAlignment="center"
+        android:textColor="@color/sleepy_black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="69dp"
+        android:background="#000000"
+        android:backgroundTint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/menulatestnews"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu" />
+
+    <TextView
+        android:id="@+id/menulatestnews"
+        android:layout_width="128dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="141dp"
+        android:layout_marginEnd="142dp"
+        android:layout_marginBottom="50dp"
+        android:fontFamily="@font/montserrat"
+        android:text="News"
+        android:textAlignment="center"
+        android:textColor="@color/sleepy_black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/menufactcheck"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/menufactcheck"
+        android:layout_width="128dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="141dp"
+        android:layout_marginEnd="142dp"
+        android:layout_marginBottom="50dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Fact Check"
+        android:textAlignment="center"
+        android:textColor="@color/sleepy_black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/menucontactus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/menucontactus"
+        android:layout_width="128dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="141dp"
+        android:layout_marginEnd="142dp"
+        android:layout_marginBottom="50dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Contact Us"
+        android:textAlignment="center"
+        android:textColor="@color/sleepy_black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/menufaq"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/menufaq"
+        android:layout_width="128dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="141dp"
+        android:layout_marginEnd="142dp"
+        android:layout_marginBottom="140dp"
+        android:fontFamily="@font/montserrat"
+        android:text="FAQ"
+        android:textAlignment="center"
+        android:textColor="@color/sleepy_black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="67dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="73dp"
+        android:background="#000000"
+        android:backgroundTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menufaq" />
+</androidx.constraintlayout.widget.ConstraintLayout>

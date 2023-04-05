@@ -8,6 +8,8 @@
     tools:context=".how_we_do_it"
     android:contentDescription="TODO">
 
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -40,7 +42,7 @@
             tools:ignore="VisualLintOverlap" />
 
         <ImageButton
-            android:id="@+id/newnews"
+            android:id="@+id/newsnews"
             android:layout_width="32sp"
             android:layout_height="32sp"
             android:layout_marginStart="16dp"
@@ -49,7 +51,7 @@
             app:layout_constraintEnd_toStartOf="@+id/latestnews"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/newsnews"
+            app:srcCompat="@drawable/newnews"
             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <ImageButton

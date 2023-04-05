@@ -6,6 +6,26 @@
     android:layout_height="match_parent"
     android:background="#16161D"
     tools:context=".YasinduDetails">
+    <TextView
+        android:id="@+id/semi"
+        android:layout_width="410dp"
+        android:layout_height="148dp"
+        android:background="@drawable/semi1"
+        android:padding="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/burgmenu"
+        android:layout_width="51dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:background="#24cce3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/semi"
+        app:srcCompat="@drawable/menu" />
 
     <ImageView
         android:id="@+id/imageView7"

@@ -8,6 +8,18 @@
     android:background="@drawable/fake_news_background_image_"
     tools:context=".ChamalDetails">
 
+    <TextView
+        android:id="@+id/semi"
+        android:layout_width="410dp"
+        android:layout_height="127dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/semi1"
+        android:padding="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="340dp"
@@ -24,13 +36,14 @@
         app:srcCompat="@drawable/nikesha"
         tools:ignore="ContentDescription" />
 
+
     <TextView
         android:id="@+id/textView10"
         android:layout_width="341dp"
         android:layout_height="149dp"
         android:layout_marginTop="55dp"
         android:background="#16161D"
-        android:fontFamily="@font/bigshot_one"
+        android:fontFamily="@font/montserrat"
         android:text="@string/Chamal_Info"
         android:textAlignment="center"
         android:textColor="#FDFDFD"
@@ -56,6 +69,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <ImageButton
+        android:id="@+id/burgmenu"
+        android:layout_width="54dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="332dp"
+        android:background="#24cce3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/semi"
+        app:srcCompat="@drawable/menu" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
