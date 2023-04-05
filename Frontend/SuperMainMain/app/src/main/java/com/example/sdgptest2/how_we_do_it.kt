@@ -68,6 +68,7 @@ class how_we_do_it : AppCompatActivity() {
             startActivity(Intent)
             finish()
         }
+
     }
 
 }
