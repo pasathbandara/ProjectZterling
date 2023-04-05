@@ -38,6 +38,9 @@ android {
                 install "requests"
                 install "bs4"
                 install "pandas"
+                install "scikit-learn"
+                install "dill"
+//                install "scipy"
 
 //                install from nltk.corpus import stopwords
 //                from bs4 import BeautifulSoup
