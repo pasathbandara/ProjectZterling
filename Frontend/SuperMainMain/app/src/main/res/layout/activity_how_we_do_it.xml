@@ -90,6 +90,7 @@
             android:text="Project Zterling"
             android:textAlignment="viewStart"
             android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/logo_bar2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.626"
             app:layout_constraintStart_toStartOf="parent"
