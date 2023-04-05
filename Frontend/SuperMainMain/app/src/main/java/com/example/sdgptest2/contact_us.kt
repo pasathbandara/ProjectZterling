@@ -8,7 +8,7 @@ class contact_us : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_contact_us)
-//picturewise abouts
+//picture wise abouts
         val pasathbtn = findViewById<android.view.View>(R.id.pasathbtn)
         pasathbtn.setOnClickListener { val intent = Intent(this, PasathDetails::class.java)
             startActivity(intent)}

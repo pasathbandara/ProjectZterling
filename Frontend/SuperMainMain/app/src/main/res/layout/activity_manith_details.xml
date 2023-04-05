@@ -5,12 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fake_news_background_image_"
+    android:backgroundTint="#16161D"
+    android:textAlignment="center"
     tools:context=".ManithDetails">
 
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="340dp"
         android:layout_height="275dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
@@ -22,19 +27,19 @@
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="321dp"
-        android:layout_height="179dp"
-        android:background="#000000"
+        android:layout_width="331dp"
+        android:layout_height="128dp"
+        android:background="#16161D"
         android:text="@string/Manith_Info"
+        android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.722"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        app:layout_constraintVertical_bias="0.34"
+        app:layout_constraintVertical_bias="0.224"
         tools:ignore="TextSizeCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -45,7 +50,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="159dp"
         android:layout_marginBottom="120dp"
-        android:background="@drawable/curvedsquarebutton"
+        android:background="@drawable/roundbtnselector"
         android:text="Back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

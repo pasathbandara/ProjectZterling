@@ -14,12 +14,14 @@
     <string name="enterwebsite">Enter your news website</string>
     <string name="true_false">_tf</string>
     <string name="todo">TODO</string>
-    <string name="Pasath_Info">Name:Pasath Bandara Email: pasath.20200280@iit.ac.lk ID:20200280</string>
-    <string name="Saicharan_Info">Name:Saicharan Gnanapiragasam Email: saicharan.20210655@iit.ac.lk ID: 20210655</string>
-    <string name="Manith_Info">Name:Manith Paranawithana        Email: manith.20210457@iit.ac.lk ID: 20210457</string>
-    <string name="Chamal_Info">Name:Chamal Silva                       Email: chamal.20210884@iit.ac.lk ID: 20210884</string>
+
+    <string name="Pasath_Info">Name:Pasath Bandara \nEmail: pasath.20200280@iit.ac.lk \nID:20200280</string>
+    <string name="Saicharan_Info">Name:Saicharan Gnanapiragasam \nEmail: saicharan.20210655@iit.ac.lk \nID: 20210655</string>
+    <string name="Manith_Info">Name:Manith Paranawithana \nEmail: manith.20210457@iit.ac.lk \nID: 20210457</string>
+    <string name="Chamal_Info">Name:Chamal Silva \nEmail: chamal.20210884@iit.ac.lk \nID: 20210884</string>
+    <string name="Yasindu_Info">Name:Yasindu Weerathunga \nEmail: yasindu.20211263@iit.ac.lk \nID: 20211263</string>
+
     <string name="todo_">TODO</string>
-    <string name="Yasindu_Info">Name:Yasindu Weerathunga Email: yasindu.20211263@iit.ac.lk              ID: 20211263</string>
     <string name="project_zterling">Project Zterling</string>
     <string name="todologo">TODO</string>
 </resources>
