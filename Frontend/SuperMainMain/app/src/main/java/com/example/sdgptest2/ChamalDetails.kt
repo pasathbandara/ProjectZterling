@@ -14,4 +14,4 @@ class ChamalDetails : AppCompatActivity() {
             val intent = Intent(this, contact_us::class.java)
             startActivity(intent)
     }
-}
+}}

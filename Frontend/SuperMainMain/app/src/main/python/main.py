@@ -36,9 +36,6 @@ def validate_news(url, news):
 
     # detector_pipeline = joblib.load("Backend/detector_pipeline.joblib")
     detector_pipeline = joblib.load("Frontend/SuperMainMain/app/src/main/python/detector_pipeline.joblib")
-    urlsdsd = "sdsdsd"
-    joblib.dump(urlsdsd, "detector_pipeline.joblib")
-    # F:\Education\IIT\2nd Year\2nd Semester\SDGP Implementation\GIT Repo\SDGP_Stuff\Frontend\SuperMainMain\app\src\main\python
     result = detector_pipeline.predict([[full_content]])
     rating = detector_pipeline.predict_proba([[full_content]])
     # print(result[0])
