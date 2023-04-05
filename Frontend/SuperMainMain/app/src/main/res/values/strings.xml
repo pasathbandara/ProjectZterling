@@ -8,11 +8,11 @@
     <string name="open">open</string>
     <string name="close">close</string>
 
-    <string name="howto_step1">fill this with step 1</string>
-    <string name="howto_step2">fill this with step 2</string>
-    <string name="howto_step3">fill this with step 3</string>
+    <string name="howto_step1">Enter the website url along with a snippet of \nthe article you want to fact check</string>
+    <string name="howto_step2">Once the button is clicked the AI will verify \nit with the database</string>
+    <string name="howto_step3">Your result is given with a percentage of accuracy \nfor your convince</string>
     <string name="enterwebsite">Enter your news website</string>
-    <string name="true_false">_tf</string>
+    <string name="true_false">Your Result Here</string>
     <string name="todo">TODO</string>
 
     <string name="Pasath_Info">Name:Pasath Bandara \nEmail: pasath.20200280@iit.ac.lk \nID:20200280</string>
@@ -24,4 +24,12 @@
     <string name="todo_">TODO</string>
     <string name="project_zterling">Project Zterling</string>
     <string name="todologo">TODO</string>
+    <string name="faq">\n\nQ: What is a fake news detection application?\n\n
+A: A fake news detection application is a software tool that helps users identify news articles that contain false information or misleading claims.\n\n
+Q: How does a fake news detection application work?\n\n
+A: A fake news detection application uses machine learning algorithms and natural language processing techniques to analyze the text of news articles and identify patterns and features that are indicative of fake news. Some applications also use external sources, such as fact-checking websites, to verify the accuracy of the information.\n\n
+Q: How accurate is a fake news detection application?\n\n
+A: The accuracy of a fake news detection application depends on the quality of the algorithms and the data used to train them. Some applications have reported accuracy rates of over 90%, while others may be less accurate.\n\n
+Q: How can I use a fake news detection application?\n\n
+A: You can use a fake news detection application by copying and pasting the text of a news article into the application or by providing a link to the article. The application will then analyze the content and provide a probability or likelihood that the article is fake.\n\n</string>
 </resources>

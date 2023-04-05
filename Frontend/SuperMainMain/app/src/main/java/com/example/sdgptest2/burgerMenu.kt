@@ -26,7 +26,11 @@ class burgerMenu : AppCompatActivity() {
             val intent = Intent(this, contact_us::class.java)
             startActivity(intent)
         }
-
+        val menufaq = findViewById<android.view.View>(R.id.menufaq)
+        menufaq.setOnClickListener {
+            val intent = Intent(this, faq::class.java)
+            startActivity(intent)
+        }
 
     }
 }
