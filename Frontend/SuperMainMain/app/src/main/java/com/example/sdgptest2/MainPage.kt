@@ -6,6 +6,6 @@ import android.os.Bundle
 class MainPage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main_page)
+        setContentView(R.layout.sign_up)
     }
 }
