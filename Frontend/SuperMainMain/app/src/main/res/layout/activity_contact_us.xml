@@ -131,6 +131,8 @@
         android:layout_marginTop="71dp"
         android:layout_marginEnd="136dp"
         android:layout_marginBottom="129dp"
+        android:foregroundGravity="center"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toTopOf="@+id/person2"
         app:layout_constraintEnd_toStartOf="@+id/person4"
         app:layout_constraintHorizontal_bias="0.0"
@@ -139,7 +141,7 @@
         app:layout_constraintVertical_bias="1.0"
         tools:srcCompat="@drawable/pasath" />
 
-    <ImageView
+    <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/person"
         android:layout_width="115dp"
         android:layout_height="128dp"
@@ -147,6 +149,8 @@
         android:layout_marginTop="182dp"
         android:layout_marginEnd="148dp"
         android:layout_marginBottom="166dp"
+        android:foregroundGravity="center"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -155,25 +159,29 @@
         app:layout_constraintVertical_bias="0.941"
         tools:srcCompat="@drawable/nikesha" />
 
-    <ImageView
+    <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/person3"
         android:layout_width="115dp"
         android:layout_height="128dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="44dp"
+        android:foregroundGravity="center"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/person2"
         app:layout_constraintTop_toBottomOf="@+id/imageButton7"
         app:layout_constraintVertical_bias="1.0"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/yasindu" />
 
-    <ImageView
+    <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/person2"
         android:layout_width="115dp"
         android:layout_height="128dp"
         android:layout_marginBottom="44dp"
+        android:foregroundGravity="center"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.054"
@@ -182,12 +190,14 @@
         app:layout_constraintVertical_bias="1.0"
         tools:srcCompat="@drawable/manith" />
 
-    <ImageView
+    <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/person4"
         android:layout_width="115dp"
         android:layout_height="128dp"
         android:layout_marginTop="54dp"
         android:layout_marginBottom="129dp"
+        android:foregroundGravity="center"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toTopOf="@+id/person3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.945"

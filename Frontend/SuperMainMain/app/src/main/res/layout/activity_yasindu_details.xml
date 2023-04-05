@@ -19,12 +19,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.085"
         tools:ignore="ImageContrastCheck"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/yasindu" />
 
     <TextView
         android:id="@+id/textView11"
-        android:layout_width="331dp"
-        android:layout_height="131dp"
+        android:layout_width="334dp"
+        android:layout_height="129dp"
         android:background="#000000"
         android:text="@string/Yasindu_Info"
         android:textColor="#F8F8F8"
