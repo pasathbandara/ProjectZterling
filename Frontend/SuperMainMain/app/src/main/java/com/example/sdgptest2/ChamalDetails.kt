@@ -12,6 +12,6 @@ class ChamalDetails : AppCompatActivity() {
         val button = findViewById<android.view.View>(R.id.backbtn)
         button.setOnClickListener {
             val intent = Intent(this, contact_us::class.java)
-            startActivity(intent)
+            startActivity(intent)}
     }
-}}
+}
