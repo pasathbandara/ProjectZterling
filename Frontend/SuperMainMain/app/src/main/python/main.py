@@ -35,7 +35,7 @@ def validate_news(url, news):
     full_content = news_title + " " + news
 
     # detector_pipeline = joblib.load("Backend/detector_pipeline.joblib")
-    detector_pipeline = joblib.load("Frontend/SuperMainMain/app/src/main/python/detector_pipeline.joblib")
+    detector_pipeline = joblib.load("detector_pipeline.joblib")
     result = detector_pipeline.predict([[full_content]])
     rating = detector_pipeline.predict_proba([[full_content]])
     # print(result[0])
