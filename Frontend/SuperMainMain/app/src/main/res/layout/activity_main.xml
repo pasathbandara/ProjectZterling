@@ -110,24 +110,24 @@
 
         <ImageButton
             android:id="@+id/imageButton2"
-            android:layout_width="50dp"
-            android:layout_height="48dp"
-            android:src="@drawable/factcheck"
+            android:layout_width="45dp"
+            android:layout_height="44dp"
             android:background="#24cce3"
+            android:src="@drawable/factcheck"
             app:layout_constraintBottom_toBottomOf="@+id/textView15"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.656"
+            app:layout_constraintHorizontal_bias="0.647"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView15"
-            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintVertical_bias="0.333"
             tools:ignore="ContentDescription,ImageContrastCheck,SpeakableTextPresentCheck" />
 
         <ImageButton
             android:id="@+id/imageButton3"
-            android:layout_width="50dp"
-            android:layout_height="48dp"
-            android:src="@drawable/newnews"
+            android:layout_width="46dp"
+            android:layout_height="44dp"
             android:background="#24cce3"
+            android:src="@drawable/newnews"
             app:layout_constraintBottom_toBottomOf="@+id/textView15"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.045"
@@ -137,30 +137,29 @@
 
         <ImageButton
             android:id="@+id/imageButton8"
-            android:layout_width="50dp"
-            android:layout_height="48dp"
-            android:src="@drawable/latestnews"
+            android:layout_width="45dp"
+            android:layout_height="43dp"
             android:background="#24cce3"
+            android:src="@drawable/latestnews"
             app:layout_constraintBottom_toBottomOf="@+id/textView15"
             app:layout_constraintEnd_toEndOf="@+id/textView15"
-            app:layout_constraintHorizontal_bias="0.335"
+            app:layout_constraintHorizontal_bias="0.336"
             app:layout_constraintStart_toStartOf="@+id/textView15"
             app:layout_constraintTop_toTopOf="@+id/textView15"
-            app:layout_constraintVertical_bias="0.0"
             tools:ignore="ContentDescription,ImageContrastCheck,SpeakableTextPresentCheck" />
 
         <ImageButton
             android:id="@+id/imageButton9"
-            android:layout_width="50dp"
-            android:layout_height="48dp"
+            android:layout_width="46dp"
+            android:layout_height="44dp"
             android:background="#24cce3"
             android:src="@drawable/team"
             app:layout_constraintBottom_toBottomOf="@+id/textView15"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.955"
+            app:layout_constraintHorizontal_bias="0.956"
             app:layout_constraintStart_toStartOf="@+id/textView15"
             app:layout_constraintTop_toTopOf="@+id/textView15"
-            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintVertical_bias="0.666"
             tools:ignore="ContentDescription,ImageContrastCheck,SpeakableTextPresentCheck" />
 
         <TextView
@@ -197,22 +196,22 @@
 
         <ImageView
             android:id="@+id/imageView8"
-            android:layout_width="355dp"
-            android:layout_height="132dp"
+            android:layout_width="354dp"
+            android:layout_height="133dp"
             android:layout_marginBottom="78dp"
             android:scaleType="fitXY"
             android:src="@drawable/img97"
             app:layout_constraintBottom_toBottomOf="@+id/textView16"
             app:layout_constraintEnd_toEndOf="@+id/textView16"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.25"
             app:layout_constraintStart_toStartOf="@+id/textView16"
             app:layout_constraintTop_toTopOf="@+id/textView16"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/textView19"
-            android:layout_width="354dp"
-            android:layout_height="79dp"
+            android:layout_width="357dp"
+            android:layout_height="81dp"
             android:layout_marginStart="2dp"
             android:layout_marginEnd="2dp"
             android:background="#252B50"
