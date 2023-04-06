@@ -12,12 +12,6 @@
         android:background="#BBE9EF"
         tools:context=".MainActivity">
 
-
-
-
-
-
-
         <TextView
             android:id="@+id/textView12"
             android:layout_width="match_parent"
@@ -37,6 +31,7 @@
             android:background="#24C9E0"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView12"
             app:layout_constraintVertical_bias="0.0" />
@@ -45,7 +40,7 @@
             android:id="@+id/MainLogo"
             android:layout_width="124dp"
             android:layout_height="55dp"
-
+            android:contentDescription="@string/todologo"
             app:layout_constraintBottom_toBottomOf="@+id/textView13"
             app:layout_constraintEnd_toEndOf="@+id/textView13"
             app:layout_constraintHorizontal_bias="0.286"
@@ -53,8 +48,21 @@
             app:layout_constraintTop_toBottomOf="@+id/textView12"
             app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/image"
-            tools:ignore="ImageContrastCheck"
-            android:contentDescription="@string/todologo" />
+            tools:ignore="ImageContrastCheck" />
+
+        <ImageButton
+            android:id="@+id/burgmenu"
+            android:layout_width="52dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="18dp"
+            android:background="#24cce3"
+            app:layout_constraintEnd_toStartOf="@+id/MainLogo"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView12"
+            app:srcCompat="@drawable/menu" />
 
         <TextView
             android:id="@+id/project_z_logo2"
