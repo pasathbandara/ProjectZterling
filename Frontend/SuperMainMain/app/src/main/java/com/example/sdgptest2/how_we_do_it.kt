@@ -67,7 +67,14 @@ class how_we_do_it : AppCompatActivity() {
             startActivity(Intent)
             finish()
         }
-
+        editTextTextMultiLine!!.setLayerType(View.LAYER_TYPE_HARDWARE, null)
+        editTextTextMultiLine2!!.setLayerType(View.LAYER_TYPE_HARDWARE, null)
+        true_false!!.setLayerType(View.LAYER_TYPE_HARDWARE, null)
+        actionBtn!!.setLayerType(View.LAYER_TYPE_HARDWARE, null)
+        newNews!!.setLayerType(View.LAYER_TYPE_HARDWARE, null)
+        latestNews!!.setLayerType(View.LAYER_TYPE_HARDWARE, null)
+        factCheck!!.setLayerType(View.LAYER_TYPE_HARDWARE, null)
+        contactUs!!.setLayerType(View.LAYER_TYPE_HARDWARE, null)
     }
 
 }

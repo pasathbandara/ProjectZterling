@@ -10,7 +10,12 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.Sdgptest2"
-        tools:targetApi="31">
+        tools:targetApi="31"
+        android:debuggable="true"
+        android:vmSafeMode="true"
+        android:allowClearUserData="true"
+        android:hardwareAccelerated="true"
+        tools:ignore="HardcodedDebugMode">
         <activity
             android:name=".faq"
             android:exported="false" />
@@ -55,7 +60,7 @@
             android:name=".contact_us"
             android:exported="false" />
         <activity
-            android:name=".MainActivity1"
+            android:name=".MainActivity"
             android:exported="false" />
 
         <meta-data

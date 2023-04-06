@@ -62,51 +62,24 @@ def validate_news(url, news):
     directory_to_remove4 = "/data/user/0/com.example.sdgptest2/files/chaquopy/stdlib-common.imy"
     directory_to_remove5 = "/data/user/0/com.example.sdgptest2/files/chaquopy/bootstrap.imy"
     directory_to_remove6 = "/data/user/0/com.example.sdgptest2/files/chaquopy/bootstrap-native/x86"
-
-    directory_to_add = "/data/data/com.example.sdgptest2/files/chaquopy/AssetFinder"
-
     # sys.path.remove(directory_to_remove)
-    # sys.path.append(directory_to_add)
-
     # sys.path.remove(directory_to_remove2)
-
     # sys.path.remove(directory_to_remove3)
     # sys.path.remove(directory_to_remove4)
     # sys.path.remove(directory_to_remove5)
     # sys.path.remove(directory_to_remove6)
 
+    directory_to_add = "/data/data/com.example.sdgptest2/files/chaquopy/AssetFinder"
+    # sys.path.append(directory_to_add)
+
     # if directory_to_remove in sys.path:
-    #     print("ssssssssssssssss                : ")
+    #     print("removed               : ")
     #     sys.path.remove(directory_to_remove)
 
     print(sys.path)
 
     # path_str = ';'.join(sys.path)
-
-
-
-
-
-
-
-    # pythonpath = os.getenv('PYTHONPATH')
-    # # print(pythonpath)
-    # export PYTHONPATH='.'
-    #
-    # print("ssssssssssssssss" + pythonpath)
-
-
-
-
-
-
     # sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
-
-
-    #
-    # print(os.getcwd())
-    #
-    #
 
     try:
         headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'}
@@ -166,18 +139,6 @@ def validate_news(url, news):
 
             return result, reliability_rating
 
-
-    # write/append data frame to CSV files
-    # if(not alreadyExists):    # Check for duplicates
-    #     df.to_csv("Frontend/SuperMainMain/app/src/main/python/Database/All_DB.csv", mode="a", index=False, header=not os.path.isfile("python/Database/All_DB.csv"))
-    #
-    #     if(result[0] == "True"):
-    #         df.to_csv("Frontend/SuperMainMain/app/src/main/python/Database/True_DB.csv", mode="a", index=False, header=not os.path.isfile("python/Database/True_DB.csv"))
-    #     elif(result[0] == "Fake"):
-    #         df.to_csv("Frontend/SuperMainMain/app/src/main/python/Database/Fake_DB.csv", mode="a", index=False, header=not os.path.isfile("python/Database/Fake_DB.csv"))
-    #
-    # return result[0], reliability_rating
-
 def retrieve_all_news():
     all_news_list = retrieve_news(join(dirname(__file__), "All_DB.csv"))
     return all_news_list
@@ -203,4 +164,3 @@ def retrieve_news(path):
         # return empty list if file doesnt exist (means that the database is empty)
         return[]
 
-#Create Login page verification
