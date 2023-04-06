@@ -29,8 +29,8 @@ android {
 
         python {
             buildPython "/urs/local/bin/python3"
-//            buildPython "C:/Users/MSI/AppData/Local/Programs/Python/Python310/python.exe"
-            buildPython "C:/Users/Pasath/AppData/Local/Programs/Python/Python39/python.exe"
+            buildPython "C:/Users/MSI/AppData/Local/Programs/Python/Python310/python.exe"
+//            buildPython "C:/Users/Pasath/AppData/Local/Programs/Python/Python39/python.exe"
 //            buildPython "C:/Users/MSI/AppData/Local/Programs/Python/Python310"
 //            buildPython "python3"
 
