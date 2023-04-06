@@ -22,14 +22,15 @@ android {
             main {
                 python {
                     srcDirs = ["src/main/python"]
+                    srcDirs = ["src/main/assets/"]
                 }
             }
         }
 
         python {
             buildPython "/urs/local/bin/python3"
-            buildPython "C:/Users/MSI/AppData/Local/Programs/Python/Python310/python.exe"
-//            buildPython "C:/Users/Pasath/AppData/Local/Programs/Python/Python39/python.exe"
+//            buildPython "C:/Users/MSI/AppData/Local/Programs/Python/Python310/python.exe"
+            buildPython "C:/Users/Pasath/AppData/Local/Programs/Python/Python39/python.exe"
 //            buildPython "C:/Users/MSI/AppData/Local/Programs/Python/Python310"
 //            buildPython "python3"
 
@@ -88,6 +89,8 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.opencsv:opencsv:5.4'
+    implementation 'com.android.support:multidex:1.0.3'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'

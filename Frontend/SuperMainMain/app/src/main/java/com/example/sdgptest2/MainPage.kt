@@ -17,5 +17,23 @@ class MainPage : AppCompatActivity() {
             startActivity(Intent)
             finish()
         }
+
+        val fakeNewsBtn = findViewById<android.view.View>(R.id.textView22)
+        fakeNewsBtn.setOnClickListener {
+            val intent = Intent(this, FakeNews::class.java)
+            startActivity(intent)
+        }
+
+        val realNewsBtn = findViewById<android.view.View>(R.id.textView23)
+        realNewsBtn.setOnClickListener {
+            val intent = Intent(this, TrueNews::class.java)
+            startActivity(intent)
+        }
+
+        val allNewsBtn = findViewById<android.view.View>(R.id.textView24)
+        allNewsBtn.setOnClickListener {
+            val intent = Intent(this, AllNews::class.java)
+            startActivity(intent)
+        }
     }
 }
