@@ -58,11 +58,13 @@
             android:layout_marginTop="40dp"
             android:layout_marginEnd="18dp"
             android:background="#24cce3"
+            app:layout_constraintBottom_toBottomOf="@+id/textView13"
             app:layout_constraintEnd_toStartOf="@+id/MainLogo"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView12"
-            app:srcCompat="@drawable/menu" />
+            app:srcCompat="@drawable/menu"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
             android:id="@+id/project_z_logo2"
@@ -120,7 +122,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView15"
             app:layout_constraintVertical_bias="0.333"
-            tools:ignore="ContentDescription,ImageContrastCheck,SpeakableTextPresentCheck" />
+            tools:ignore="ContentDescription,ImageContrastCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <ImageButton
             android:id="@+id/imageButton3"
@@ -133,7 +135,7 @@
             app:layout_constraintHorizontal_bias="0.045"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView15"
-            tools:ignore="ContentDescription,ImageContrastCheck,SpeakableTextPresentCheck" />
+            tools:ignore="ContentDescription,ImageContrastCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <ImageButton
             android:id="@+id/imageButton8"
@@ -146,7 +148,7 @@
             app:layout_constraintHorizontal_bias="0.336"
             app:layout_constraintStart_toStartOf="@+id/textView15"
             app:layout_constraintTop_toTopOf="@+id/textView15"
-            tools:ignore="ContentDescription,ImageContrastCheck,SpeakableTextPresentCheck" />
+            tools:ignore="ContentDescription,ImageContrastCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <ImageButton
             android:id="@+id/imageButton9"
@@ -160,7 +162,7 @@
             app:layout_constraintStart_toStartOf="@+id/textView15"
             app:layout_constraintTop_toTopOf="@+id/textView15"
             app:layout_constraintVertical_bias="0.666"
-            tools:ignore="ContentDescription,ImageContrastCheck,SpeakableTextPresentCheck" />
+            tools:ignore="ContentDescription,ImageContrastCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <TextView
             android:id="@+id/textView16"
@@ -196,8 +198,8 @@
 
         <ImageView
             android:id="@+id/imageView8"
-            android:layout_width="354dp"
-            android:layout_height="133dp"
+            android:layout_width="357dp"
+            android:layout_height="120dp"
             android:layout_marginBottom="78dp"
             android:scaleType="fitXY"
             android:src="@drawable/img97"
@@ -220,74 +222,19 @@
             android:textColor="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="@+id/textView16"
             app:layout_constraintEnd_toEndOf="@+id/textView16"
+            app:layout_constraintHorizontal_bias="0.666"
             app:layout_constraintStart_toStartOf="@+id/textView16"
-            app:layout_constraintTop_toBottomOf="@+id/imageView8" />
-
-        <ImageView
-            android:id="@+id/imageView9"
-            android:layout_width="355dp"
-            android:layout_height="132dp"
-            android:layout_marginBottom="78dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/img98"
-            app:layout_constraintBottom_toBottomOf="@+id/textView17"
-            app:layout_constraintEnd_toEndOf="@+id/textView17"
-            app:layout_constraintStart_toStartOf="@+id/textView17"
-            app:layout_constraintTop_toTopOf="@+id/textView17" />
-
-        <ImageView
-            android:id="@+id/imageView10"
-            android:layout_width="358dp"
-            android:layout_height="132dp"
-            android:layout_marginBottom="78dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/img99"
-            app:layout_constraintBottom_toBottomOf="@+id/textView18"
-            app:layout_constraintEnd_toEndOf="@+id/textView18"
-            app:layout_constraintStart_toStartOf="@+id/textView18"
-            app:layout_constraintTop_toTopOf="@+id/textView18" />
-
-        <TextView
-            android:id="@+id/textView20"
-            android:layout_width="354dp"
-            android:layout_height="75dp"
-            android:layout_marginStart="2dp"
-            android:layout_marginTop="2dp"
-            android:fontFamily="@font/montserrat"
-            android:layout_marginEnd="2dp"
-            android:layout_marginBottom="1dp"
-            android:background="#252B50"
-            android:text="View All True News"
-            android:textColor="#FFFFFF"
-            app:layout_constraintBottom_toBottomOf="@+id/textView17"
-            app:layout_constraintEnd_toEndOf="@+id/textView17"
-            app:layout_constraintStart_toStartOf="@+id/textView17"
-            app:layout_constraintTop_toBottomOf="@+id/imageView9" />
-
-        <TextView
-            android:id="@+id/textView21"
-            android:layout_width="356dp"
-            android:layout_height="78dp"
-            android:layout_marginStart="3dp"
-            android:fontFamily="@font/montserrat"
-            android:layout_marginTop="132dp"
-            android:layout_marginEnd="2dp"
-            android:background="#252B50"
-            android:text="View All News"
-            android:textColor="#FFFFFF"
-            app:layout_constraintBottom_toBottomOf="@+id/textView18"
-            app:layout_constraintEnd_toEndOf="@+id/textView18"
-            app:layout_constraintStart_toStartOf="@+id/textView18"
-            app:layout_constraintTop_toTopOf="@+id/imageView10" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView8"
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/textView22"
-            android:fontFamily="@font/montserrat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="180dp"
             android:layout_marginEnd="19dp"
             android:layout_marginBottom="11dp"
+            android:fontFamily="@font/montserrat"
             android:text="ReadMore>>"
             android:textColor="#FBFBFB"
             app:layout_constraintBottom_toBottomOf="@+id/textView16"
@@ -295,6 +242,69 @@
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/textView19"
             app:layout_constraintTop_toTopOf="@+id/textView16"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="355dp"
+            android:layout_height="132dp"
+            android:layout_marginBottom="94dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img98"
+            app:layout_constraintBottom_toBottomOf="@+id/textView17"
+            app:layout_constraintEnd_toEndOf="@+id/textView17"
+            app:layout_constraintHorizontal_bias="0.333"
+            app:layout_constraintStart_toStartOf="@+id/textView17"
+            app:layout_constraintTop_toBottomOf="@+id/textView16"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="358dp"
+            android:layout_height="132dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="84dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img99"
+            app:layout_constraintBottom_toBottomOf="@+id/textView18"
+            app:layout_constraintEnd_toEndOf="@+id/textView18"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/textView18"
+            app:layout_constraintTop_toBottomOf="@+id/textView20"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="355dp"
+            android:layout_height="76dp"
+            android:layout_marginTop="115dp"
+            android:layout_marginBottom="18dp"
+            android:background="#252B50"
+            android:fontFamily="@font/montserrat"
+            android:text="View All True News"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/textView17"
+            app:layout_constraintEnd_toEndOf="@+id/textView17"
+            app:layout_constraintStart_toStartOf="@+id/textView17"
+            app:layout_constraintTop_toTopOf="@+id/textView17" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="359dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="132dp"
+            android:layout_marginEnd="2dp"
+            android:background="#252B50"
+            android:fontFamily="@font/montserrat"
+            android:text="View All News"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/textView18"
+            app:layout_constraintEnd_toEndOf="@+id/textView18"
+            app:layout_constraintHorizontal_bias="0.8"
+            app:layout_constraintStart_toStartOf="@+id/textView18"
+            app:layout_constraintTop_toTopOf="@+id/imageView10"
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
@@ -303,12 +313,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="185dp"
             android:layout_marginBottom="6dp"
+            android:fontFamily="@font/montserrat"
             android:text="ReadMore>>"
             android:textColor="#FFFFFF"
-            android:fontFamily="@font/montserrat"
             app:layout_constraintBottom_toBottomOf="@+id/textView17"
             app:layout_constraintEnd_toEndOf="@+id/textView20"
-            app:layout_constraintHorizontal_bias="0.946"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/textView20"
             app:layout_constraintTop_toTopOf="@+id/imageView9"
             app:layout_constraintVertical_bias="0.0" />
