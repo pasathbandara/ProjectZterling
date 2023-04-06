@@ -11,15 +11,102 @@ import csv
 import dill
 from os.path import dirname, join
 
+# os.getcwd()
+# os.chdir(join(dirname(__file__), "python"))
+# import scipy
 
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.feature_extraction.text import TfidfTransformer
-from sklearn.metrics import classification_report
-from sklearn.model_selection import train_test_split
-from sklearn.model_selection import train_test_split
-import sklearn
+# import sys
+
+
+# from sklearn.feature_extraction.text import CountVectorizer
+# from sklearn.feature_extraction.text import TfidfTransformer
+# from sklearn.naive_bayes import MultinomialNB
+# from sklearn.metrics import classification_report
+# from sklearn.model_selection import train_test_split
+# from sklearn.pipeline import Pipeline
+
+# import sklearn
 
 def validate_news(url, news):
+    # scipy_path = "/absosdslute/path/to/scipy"
+    # sys.path.append(scipy_path)
+    import sys
+    # print (sys.path)
+    # import scipy
+    # print ("Current working dir : %s" % os.getcwd())
+    # os.chdir("C:/Users/MSI/AppData/Local/Programs/Python/Python310/Lib/site-packages")
+    # print ("Current working dir : %s" % os.getcwd())
+
+    # import scipy
+    # scipy_dir = os.path.dirname(scipy.__file__)
+    # current_dir = os.getcwd()
+    #
+    # if current_dir == scipy_dir:
+    #     print("You are in the SciPy source tree.")
+    # else:
+    #     print("You are not in the SciPy source tree.")
+
+
+    # # https://stackoverflow.com/questions/11069309/python-import-scipy-leads-to-traceback-referencing-a-deleted-file
+    # import sys
+    # print (sys.path)
+
+
+    # https://stackoverflow.com/questions/11069309/python-import-scipy-leads-to-traceback-referencing-a-deleted-file
+    import sys
+    print (sys.path)
+
+    directory_to_remove = "/data/data/com.example.sdgptest2/files/chaquopy/AssetFinder/app"
+    directory_to_remove2 = "/data/data/com.example.sdgptest2/files/chaquopy/AssetFinder/requirements"
+    directory_to_remove3 = "/data/data/com.example.sdgptest2/files/chaquopy/AssetFinder/stdlib-x86"
+    directory_to_remove4 = "/data/user/0/com.example.sdgptest2/files/chaquopy/stdlib-common.imy"
+    directory_to_remove5 = "/data/user/0/com.example.sdgptest2/files/chaquopy/bootstrap.imy"
+    directory_to_remove6 = "/data/user/0/com.example.sdgptest2/files/chaquopy/bootstrap-native/x86"
+
+    directory_to_add = "/data/data/com.example.sdgptest2/files/chaquopy/AssetFinder"
+
+    # sys.path.remove(directory_to_remove)
+    # sys.path.append(directory_to_add)
+
+    # sys.path.remove(directory_to_remove2)
+
+    # sys.path.remove(directory_to_remove3)
+    # sys.path.remove(directory_to_remove4)
+    # sys.path.remove(directory_to_remove5)
+    # sys.path.remove(directory_to_remove6)
+
+    # if directory_to_remove in sys.path:
+    #     print("ssssssssssssssss                : ")
+    #     sys.path.remove(directory_to_remove)
+
+    print(sys.path)
+
+    # path_str = ';'.join(sys.path)
+
+
+
+
+
+
+
+    # pythonpath = os.getenv('PYTHONPATH')
+    # # print(pythonpath)
+    # export PYTHONPATH='.'
+    #
+    # print("ssssssssssssssss" + pythonpath)
+
+
+
+
+
+
+    # sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
+
+
+    #
+    # print(os.getcwd())
+    #
+    #
 
     try:
         headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'}
@@ -34,9 +121,14 @@ def validate_news(url, news):
 
     full_content = news_title + " " + news
 
+    print(dirname(__file__))
+
     file_path = join(dirname(__file__), "detector_pipeline.dill")
     if(os.path.getsize(file_path) > 0):
         with open(file_path, 'rb') as detector_file:
+            # Move one directory back
+            # cd ..
+            # #
             detector_pipeline = dill.load(detector_file)
             result = detector_pipeline.predict([[full_content]])[0]
             # print(result)

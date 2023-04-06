@@ -38,9 +38,10 @@ android {
                 install "requests"
                 install "bs4"
                 install "pandas"
-                install "scikit-learn"
+//                install "scikit-learn"
                 install "dill"
-                install "scipy"
+
+
 
 //                install from nltk.corpus import stopwords
 //                from bs4 import BeautifulSoup
@@ -52,6 +53,10 @@ android {
 //                install "os" Could not find a version that satisfies the requirement
 //                install "csv" Could not find a version that satisfies the requirement
             }
+
+//            conda {
+//                install "scikit-learn"
+//            }
         }
 
         ndk {
@@ -86,3 +91,17 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 }
+
+//task installPythonPackage(type: Exec) {
+//    commandLine 'pip', 'install', '.'
+//    workingDir "${projectDir}/src/main/python"
+//}
+//
+//task buildJava(dependsOn: 'installPythonPackage') {
+//    // Define the tasks to run when building the Java project
+//    doLast {
+//        // Run the Java build tasks
+//        gradleBuild = project.gradle.startBuild()
+//        gradleBuild.forTasks('clean', 'build').run()
+//    }
+//}
