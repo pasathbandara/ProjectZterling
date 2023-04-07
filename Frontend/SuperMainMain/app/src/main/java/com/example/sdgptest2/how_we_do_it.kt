@@ -28,29 +28,31 @@ class how_we_do_it : AppCompatActivity() {
 
         if (!Python.isStarted()) Python.start(AndroidPlatform(this))
         val py = Python.getInstance()
-        val pyobj = py.getModule("main")
 
         val actionBtn = findViewById<Button>(R.id.urlcheck)
         actionBtn.setOnClickListener(){
             actionBtn.setOnClickListener {
-//                simple helloworld for testing
-//                val obj = pyobj.callAttr("helloworld", "yasindu").toString()
-//                println(obj)
-
-                val obj = pyobj.callAttr("validate_news", editTextTextMultiLine!!.text.toString(), editTextTextMultiLine2!!.text.toString()) as List<PyObject>
-                true_false!!.text = "obj.toString()"
-                println("\n"+obj)
-            }
-        }
-
-        val actionBtns = findViewById<Button>(R.id.urlcheck)
-        actionBtns.setOnClickListener(){
-            actionBtns.setOnClickListener {
-                val obj = pyobj.callAttr("validate_news", editTextTextMultiLine!!.text.toString(), editTextTextMultiLine2!!.text.toString()) as List<PyObject>
-                true_false!!.text = "obj.toString()"
+//                simple function for testing
+                val pyobj = py.getModule("hello_user")
+                val obj = pyobj.callAttr("helloworld").toString()
+                true_false!!.text = obj
                 println(obj)
+
+//                val pyobj = py.getModule("main")
+//                val obj = pyobj.callAttr("validate_news", editTextTextMultiLine!!.text.toString(), editTextTextMultiLine2!!.text.toString()) as List<PyObject>
+//                true_false!!.text = "obj.toString()"
+//                println("\n"+obj)
             }
         }
+
+//        val actionBtn = findViewById<Button>(R.id.urlcheck)
+//        actionBtn.setOnClickListener(){
+//            actionBtn.setOnClickListener {
+//                val obj = pyobj.callAttr("validate_news", editTextTextMultiLine!!.text.toString(), editTextTextMultiLine2!!.text.toString()) as List<PyObject>
+//                true_false!!.text = "obj.toString()"
+//                println(obj)
+//            }
+//        }
 
         val newNews = findViewById<ImageButton>(R.id.newsnews)
         newNews.setOnClickListener(){
