@@ -33,15 +33,15 @@ class how_we_do_it : AppCompatActivity() {
         actionBtn.setOnClickListener(){
             actionBtn.setOnClickListener {
 //                simple function for testing
-                val pyobj = py.getModule("hello_user")
-                val obj = pyobj.callAttr("helloworld").toString()
-                true_false!!.text = obj
-                println(obj)
+//                val pyobj = py.getModule("hello_user")
+//                val obj = pyobj.callAttr("helloworld").toString()
+//                true_false!!.text = obj
+//                println(obj)
 
-//                val pyobj = py.getModule("main")
-//                val obj = pyobj.callAttr("validate_news", editTextTextMultiLine!!.text.toString(), editTextTextMultiLine2!!.text.toString()) as List<PyObject>
-//                true_false!!.text = "obj.toString()"
-//                println("\n"+obj)
+                val pyobj = py.getModule("main")
+                val obj = pyobj.callAttr("validate_news", editTextTextMultiLine!!.text.toString(), editTextTextMultiLine2!!.text.toString()) as List<PyObject>
+                true_false!!.text = "obj.toString()"
+                println("\n"+obj)
             }
         }
 

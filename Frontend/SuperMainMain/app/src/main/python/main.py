@@ -1,14 +1,32 @@
-import string
-from nltk.corpus import stopwords
-import requests
-from bs4 import BeautifulSoup
-from urllib.request import urlopen
-import urllib
-import pandas as pd
+import sys
+# print("Here YOU GO: "+sys.path)
+print(sys.path)
+
+# sys.path.insert(0, '/Lib/site-packages')
+# sys.path =[]
+
+sys.path.append('/data/data/com.example.sdgptest2/files/chaquopy/AssetFinder/app')
+sys.path.append('/data/data/com.example.sdgptest2/files/chaquopy/AssetFinder/app/CustomLibrary')
+
+# ['',  'C:\\Python310\\python310.zip',  'C:\\Python310\\DLLs',  'C:\\Python310\\lib',  'C:\\Python310',  'C:\\Python310\\lib\\site-packages']
+
+print(sys.path)
+
+# import string
+# from nltk.corpus import stopwords
+
+# import requests
+# from bs4 import BeautifulSoup
+# from urllib.request import urlopen
+# import urllib
+# import pandas as pd
+
 import os
-import csv
+
+# import csv
+
 import dill
-from os.path import dirname, join
+# from os.path import dirname, join
 
 # os.getcwd()
 # os.chdir(join(dirname(__file__), "python"))
@@ -93,7 +111,7 @@ def validate_news(url, news):
 
     # print(dirname(__file__))
 
-    file_path = join(dirname(__file__), "detector_pipeline.dill")
+    file_path = "/data/data/com.example.sdgptest2/files/chaquopy/AssetFinder/app/detector_pipeline.dill"
     if(os.path.getsize(file_path) > 0):
         with open(file_path, 'rb') as detector_file:
             # Move one directory back
@@ -162,10 +180,13 @@ def retrieve_news(path):
         return[]
 
 def helloworld(a):
-    return "HELLLLLLLLLLLOOOOOOOOOOOO        " + a        
+    import sys
+    # print("Here YOU GO: "+sys.path)
+    return a + sys.path
 
 # url = "https://www.hindustantimes.com/cricket/virat-kohli-ends-century-drought-smashes-maiden-t20i-ton-in-india-vs-afghanistan-asia-cup-super-4-match-101662649555677.html"
 # news = '''Virat Kohli reached his first international century since November 2019, as he reached the three-figure mark against Afghanistan in Asia Cup 2022. Team India's star batter Virat Kohli ended the wait for an international century, reaching the three-figure mark against Afghanistan in the Asia Cup Super 4 match in Dubai. Kohli reached his hundred in 53 balls, continuing on his impressive run of form since his return to Team India in the continental tournament. Before the century knock, Kohli had scored two fifties in the Asia Cup as well (59* against Hong Kong and 60 against Pakistan). Kohli's last century in international cricket came in November 2019 against Bangladesh; last month, the batter had endured a thousand days without a ton. The century against Afghanistan was Kohli's 71st international hundred, as he equalled Australia's batting great Ricky Ponting. Only Sachin Tendulkar (100 international centuries) stays ahead of the former India captain now.
 # In the game against Afghanistan, Kohli opened the innings alongside stand-in skipper KL Rahul as Rohit Sharma was given rest in the game. This was the first time Kohli came as an opener in T20Is since March 2021, when he had forged a brilliant 94-run stand with Rohit; it was an even better outing for the former Indian captain this time, as he forged a 119-run stand with Rahul, who also scored a much-needed half-century (62 off 40 deliveries). Kohli began aggressively in his knock, racing to his half-century in 32 deliveries. Following the quick dismissals of Rahul and Suryakumar Yadav (6), the 33-year-old batter readjusted his game alongside Rishabh Pant, resorting to singles and doubles through the middle-overs before upping the ante against Afghanistan pacers. He eventually reached his century in the 19th over of the game with a six against Fareed Ahmed – this was his maiden T20I hundred.
 # Kohli eventually remained unbeaten on 122 runs off 61 deliveries, smashing 12 fours and six sixes en route to his century knock.'''
 # result, reliability_rating = validate_news(url, news)
+
