@@ -19,6 +19,7 @@ class burgerMenu : AppCompatActivity() {
         menufactcheck.setOnClickListener {
             val intent = Intent(this, how_we_do_it::class.java)
             startActivity(intent)
+//            finish()
         }
 
         val menucontactus = findViewById<android.view.View>(R.id.menucontactus)

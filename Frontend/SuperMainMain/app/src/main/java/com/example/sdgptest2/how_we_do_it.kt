@@ -18,6 +18,7 @@ class how_we_do_it : AppCompatActivity() {
     var button2: Button? = null
     var true_false: TextView? = null
     override fun onCreate(savedInstanceState: Bundle?) {
+//        println("\n\nIntent on How We Do It")
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_how_we_do_it)
         editTextTextMultiLine = findViewById<View>(R.id.editTextTextMultiLine) as EditText
@@ -27,18 +28,30 @@ class how_we_do_it : AppCompatActivity() {
 
         if (!Python.isStarted()) Python.start(AndroidPlatform(this))
         val py = Python.getInstance()
-
         val pyobj = py.getModule("main")
-
 
         val actionBtn = findViewById<Button>(R.id.urlcheck)
         actionBtn.setOnClickListener(){
             actionBtn.setOnClickListener {
+//                simple helloworld for testing
+//                val obj = pyobj.callAttr("helloworld", "yasindu").toString()
+//                println(obj)
+
+                val obj = pyobj.callAttr("validate_news", editTextTextMultiLine!!.text.toString(), editTextTextMultiLine2!!.text.toString()) as List<PyObject>
+                true_false!!.text = "obj.toString()"
+                println("\n"+obj)
+            }
+        }
+
+        val actionBtns = findViewById<Button>(R.id.urlcheck)
+        actionBtns.setOnClickListener(){
+            actionBtns.setOnClickListener {
                 val obj = pyobj.callAttr("validate_news", editTextTextMultiLine!!.text.toString(), editTextTextMultiLine2!!.text.toString()) as List<PyObject>
                 true_false!!.text = "obj.toString()"
                 println(obj)
             }
         }
+
         val newNews = findViewById<ImageButton>(R.id.newsnews)
         newNews.setOnClickListener(){
             val Intent = Intent(this, MainPage::class.java)
@@ -67,14 +80,15 @@ class how_we_do_it : AppCompatActivity() {
             startActivity(Intent)
             finish()
         }
-        editTextTextMultiLine!!.setLayerType(View.LAYER_TYPE_HARDWARE, null)
-        editTextTextMultiLine2!!.setLayerType(View.LAYER_TYPE_HARDWARE, null)
-        true_false!!.setLayerType(View.LAYER_TYPE_HARDWARE, null)
-        actionBtn!!.setLayerType(View.LAYER_TYPE_HARDWARE, null)
-        newNews!!.setLayerType(View.LAYER_TYPE_HARDWARE, null)
-        latestNews!!.setLayerType(View.LAYER_TYPE_HARDWARE, null)
-        factCheck!!.setLayerType(View.LAYER_TYPE_HARDWARE, null)
-        contactUs!!.setLayerType(View.LAYER_TYPE_HARDWARE, null)
+
+//        editTextTextMultiLine!!.setLayerType(View.LAYER_TYPE_HARDWARE, null)
+//        editTextTextMultiLine2!!.setLayerType(View.LAYER_TYPE_HARDWARE, null)
+//        true_false!!.setLayerType(View.LAYER_TYPE_HARDWARE, null)
+//        actionBtn!!.setLayerType(View.LAYER_TYPE_HARDWARE, null)
+//        newNews!!.setLayerType(View.LAYER_TYPE_HARDWARE, null)
+//        latestNews!!.setLayerType(View.LAYER_TYPE_HARDWARE, null)
+//        factCheck!!.setLayerType(View.LAYER_TYPE_HARDWARE, null)
+//        contactUs!!.setLayerType(View.LAYER_TYPE_HARDWARE, null)
     }
 
 }
