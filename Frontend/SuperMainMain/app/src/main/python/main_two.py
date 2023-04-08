@@ -92,7 +92,7 @@ def retrieve_all_news():
             "text": news[1],
             "domain": news[2],
             "validity": news[3],
-            "rating": news[4]
+            "rating": news[5]
         }
         news_dicts.append(news_dict)
     return jsonify(news_dicts)
@@ -107,7 +107,7 @@ def retrieve_true_news():
             "text": news[1],
             "domain": news[2],
             "validity": news[3],
-            "rating": news[4]
+            "rating": news[5]
         }
         news_dicts.append(news_dict)
     return jsonify(news_dicts)
@@ -122,7 +122,7 @@ def retrieve_fake_news():
             "text": news[1],
             "domain": news[2],
             "validity": news[3],
-            "rating": news[4]
+            "rating": news[5]
         }
         news_dicts.append(news_dict)
     return jsonify(news_dicts)
