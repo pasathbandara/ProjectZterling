@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/listview_background_shape">
-<!--    <stroke -->
-<!--        android:width="2dp" -->
-<!--        android:color="#ff207d94" />-->
+    <!-- Define a stroke with a width of 2dp and a color of #ff207d94 -->
+    <!-- Commented out for optimization -->
+    <!-- <stroke -->
+    <!--     android:width="2dp" -->
+    <!--     android:color="#ff207d94" /> -->
+
+    <!-- Add 2dp padding on each side of the shape -->
     <padding
         android:left="2dp"
         android:top="2dp"
         android:right="2dp"
         android:bottom="2dp" />
+
+    <!-- Set the radius of the shape corners to 0dp -->
     <corners android:radius="0dp" />
+
+    <!-- Set the background color of the shape to #24cce3 -->
     <solid android:color="#24cce3" />
 </shape>

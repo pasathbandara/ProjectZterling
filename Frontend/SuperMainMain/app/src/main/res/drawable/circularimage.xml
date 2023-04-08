@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Define a rectangular shape with rounded corners -->
     <item>
         <shape android:shape="rectangle">
+            <!-- Define the radius of the rounded corners -->
             <corners
                 android:topLeftRadius="30dp"
                 android:topRightRadius="30dp"
                 android:bottomRightRadius="30dp"
                 android:bottomLeftRadius="30dp"/>
+            <!-- Define the padding of the shape -->
             <padding android:top="15dp" android:bottom="15dp" android:left="15dp" android:right="15dp"/>
+            <!-- Define the background color of the shape -->
             <solid android:color="#8cff91a4"/>
+            <!-- Define the size of the shape -->
             <size
                 android:width="56dp"
                 android:height="56dp" />
