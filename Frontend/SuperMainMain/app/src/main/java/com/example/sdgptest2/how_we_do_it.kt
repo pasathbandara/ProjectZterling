@@ -139,39 +139,39 @@ class how_we_do_it : AppCompatActivity() {
         fun validateNews(@Body data: Map<String, String>): Call<Map<String, Any>>
     }
 
-/*
------------------------------ THE BELOW CODE IS TO BE USED WHEN THE USER IS NOT CONNECTED TO INTERNET---------------------------------------------------
-*/
-fun startChaqoupyFramework(context: Context) {
-    println(
-        "Device isn't connected to the Internet. " +
-                "\nApplication Functionalities will be done using chaqoupy framework" +
-                "\nYou might experience crashes and bugs"
-    )
-    if (!Python.isStarted()) Python.start(AndroidPlatform(context))
+    /*
+    ----------------------------- THE BELOW CODE IS TO BE USED WHEN THE USER IS NOT CONNECTED TO INTERNET---------------------------------------------------
+    */
+    fun startChaqoupyFramework(context: Context) {
+        println(
+            "Device isn't connected to the Internet. " +
+                    "\nApplication Functionalities will be done using chaqoupy framework" +
+                    "\nYou might experience crashes and bugs"
+        )
+        if (!Python.isStarted()) Python.start(AndroidPlatform(context))
 
-    val py = Python.getInstance()
+        val py = Python.getInstance()
 
-    val actionBtn = findViewById<Button>(R.id.urlcheck)
-    actionBtn.setOnClickListener() {
-        actionBtn.setOnClickListener {
-            /*  To Test A Function - Offline Mode
-            simple function for testing
-            val pyobj = py.getModule("hello_user")
-            val obj = pyobj.callAttr("helloworld").toString()
-            true_false!!.text = obj
-            println(obj)
-             */
+        val actionBtn = findViewById<Button>(R.id.urlcheck)
+        actionBtn.setOnClickListener() {
+            actionBtn.setOnClickListener {
+                /*  To Test A Function - Offline Mode
+                simple function for testing
+                val pyobj = py.getModule("hello_user")
+                val obj = pyobj.callAttr("helloworld").toString()
+                true_false!!.text = obj
+                println(obj)
+                 */
 
-            val pyobj = py.getModule("main")
-            val obj = pyobj.callAttr(
-                "validate_news",
-                editTextTextMultiLine!!.text.toString(),
-                editTextTextMultiLine2!!.text.toString()
-            ) as List<PyObject>
-            true_false!!.text = "obj.toString()"
-            println("\n" + obj)
+                val pyobj = py.getModule("main")
+                val obj = pyobj.callAttr(
+                    "validate_news",
+                    editTextTextMultiLine!!.text.toString(),
+                    editTextTextMultiLine2!!.text.toString()
+                ) as List<PyObject>
+                true_false!!.text = "obj.toString()"
+                println("\n" + obj)
+            }
         }
     }
-}
 }
