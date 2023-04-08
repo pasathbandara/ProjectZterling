@@ -20,20 +20,21 @@
             android:id="@+id/fakenewstextview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="37dp"
-            android:layout_marginTop="23dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginBottom="56dp"
             android:background="@drawable/shadowbox"
+            android:fadeScrollbars="false"
             android:fontFamily="@font/montserrat"
+            android:isScrollContainer="true"
             android:maxLines="10000"
+            android:nestedScrollingEnabled="true"
+            android:scrollbarStyle="insideInset"
             android:scrollbars="vertical"
             android:text="All the fake news is displayed here"
-            android:textAlignment="center"
-            android:textAllCaps="true"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-            android:textStyle="italic"
-            tools:ignore="MissingConstraints" />
+            android:textSize="12sp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="37dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
