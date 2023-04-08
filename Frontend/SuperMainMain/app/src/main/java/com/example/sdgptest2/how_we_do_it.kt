@@ -33,7 +33,7 @@ class how_we_do_it : AppCompatActivity() {
 
     // Retrofit setup
     val retrofit = Retrofit.Builder()
-        .baseUrl("http://192.168.1.2:5000") // Replace <your_ip_address> with your computer's IP address
+        .baseUrl("http://192.168.8.100:5000") // Replace <your_ip_address> with your computer's IP address
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 

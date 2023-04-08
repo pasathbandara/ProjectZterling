@@ -60,13 +60,23 @@ def validate_news():
                 alreadyExists = False
 
             # write/append data frame to CSV files
-            if(not alreadyExists):    # Check for duplicates
-                df.to_csv(join(dirname(__file__), "Database/All_DB.csv"), mode="a", index=False, header=not os.path.isfile("Database/All_DB.csv"))
 
-                if(result == "True"):
-                    df.to_csv(join(dirname(__file__), "Database/True_DB.csv"), mode="a", index=False, header=not os.path.isfile("Database/True_DB.csv"))
-                elif(result == "Fake"):
-                    df.to_csv(join(dirname(__file__), "Database/Fake_DB.csv"), mode="a", index=False, header=not os.path.isfile("Database/Fake_DB.csv"))
+            # ALLOW REDUNDANCY
+            df.to_csv(join(dirname(__file__), "Database/All_DB.csv"), mode="a", index=False, header=not os.path.isfile("Database/All_DB.csv"))
+
+            if(result == "True"):
+                df.to_csv(join(dirname(__file__), "Database/True_DB.csv"), mode="a", index=False, header=not os.path.isfile("Database/True_DB.csv"))
+            elif(result == "Fake"):
+                df.to_csv(join(dirname(__file__), "Database/Fake_DB.csv"), mode="a", index=False, header=not os.path.isfile("Database/Fake_DB.csv"))
+
+            # # DONT ALLOW REDUNDANCY:
+            # if(not alreadyExists):    # Check for duplicates
+            #     df.to_csv(join(dirname(__file__), "Database/All_DB.csv"), mode="a", index=False, header=not os.path.isfile("Database/All_DB.csv"))
+
+            #     if(result == "True"):
+            #         df.to_csv(join(dirname(__file__), "Database/True_DB.csv"), mode="a", index=False, header=not os.path.isfile("Database/True_DB.csv"))
+            #     elif(result == "Fake"):
+            #         df.to_csv(join(dirname(__file__), "Database/Fake_DB.csv"), mode="a", index=False, header=not os.path.isfile("Database/Fake_DB.csv"))
 
             return jsonify({'result': result, 'reliability_rating': reliability_rating})
     else:
