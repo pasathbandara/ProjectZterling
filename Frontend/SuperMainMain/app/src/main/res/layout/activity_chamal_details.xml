@@ -1,13 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?><!-- Root layout -->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="#16161D"
     android:background="@drawable/fake_news_background_image_"
+    android:backgroundTint="#16161D"
     tools:context=".ChamalDetails">
 
+    <!-- Semi-transparent background with padding -->
     <TextView
         android:id="@+id/semi"
         android:layout_width="410dp"
@@ -20,13 +21,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Image view for displaying an image with a drop shadow -->
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="340dp"
-        android:layout_height="275dp"
+        android:layout_width="189dp"
+        android:layout_height="256dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="16dp"
+        android:background="@drawable/shadowbox"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
@@ -36,7 +39,7 @@
         app:srcCompat="@drawable/nikesha"
         tools:ignore="ContentDescription" />
 
-
+    <!-- Text view for displaying Chamal's information -->
     <TextView
         android:id="@+id/textView10"
         android:layout_width="341dp"
@@ -56,6 +59,7 @@
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="TextSizeCheck" />
 
+    <!-- Button for going back to the previous screen -->
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/backbtn"
         android:layout_width="wrap_content"
@@ -63,13 +67,14 @@
         android:layout_marginStart="154dp"
         android:layout_marginTop="22dp"
         android:layout_marginEnd="154dp"
-        android:fontFamily="@font/montserrat"
         android:background="@drawable/roundbtnselector"
+        android:fontFamily="@font/montserrat"
         android:text="Back"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
+    <!--Image button for the burger menu page-->
     <ImageButton
         android:id="@+id/burgmenu"
         android:layout_width="54dp"

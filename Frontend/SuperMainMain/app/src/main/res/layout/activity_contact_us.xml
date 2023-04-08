@@ -1,17 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?><!-- The outermost element is a ScrollView to allow for scrolling when the content doesn't fit on the screen -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- The main layout is a ConstraintLayout that covers the entire screen -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/fake_news_background_image_"
         tools:context=".contact_us">
 
+        <!-- A TextView that serves as a logo bar with a background color -->
         <TextView
             android:id="@+id/logo_bar"
             android:layout_width="412dp"
@@ -23,6 +24,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <!-- An ImageView that displays an image -->
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="219dp"
@@ -36,20 +38,23 @@
             app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/image" />
 
+        <!--Logo for the page-->
         <TextView
             android:id="@+id/project_z_logo"
             android:layout_width="114dp"
             android:layout_height="56dp"
-            android:text="Project Zterling"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="112dp"
             android:fontFamily="@font/montserrat"
+            android:text="Project Zterling"
             android:textAlignment="center"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/logo_bar"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.542"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.963"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <!--widget bar background-->
         <TextView
             android:id="@+id/btn_bar"
             android:layout_width="412dp"
@@ -65,12 +70,14 @@
             app:layout_constraintTop_toBottomOf="@+id/logo_bar"
             app:layout_constraintVertical_bias="0.0" />
 
+        <!--Contact Us Image Button-->
         <ImageButton
             android:id="@+id/contcont"
             android:layout_width="52dp"
             android:layout_height="52dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="612dp"
+            android:background="#24cce3"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/btn_bar"
             app:layout_constraintHorizontal_bias="0.877"
@@ -80,6 +87,7 @@
             app:srcCompat="@drawable/team"
             tools:ignore="SpeakableTextPresentCheck" />
 
+        <!--News Image Button-->
         <ImageButton
             android:id="@+id/contlatestnews"
             android:layout_width="52dp"
@@ -87,6 +95,7 @@
             android:layout_marginTop="12dp"
             android:layout_marginEnd="40dp"
             android:layout_marginBottom="612dp"
+            android:background="#24cce3"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/contfactcheck"
             app:layout_constraintHorizontal_bias="1.0"
@@ -96,6 +105,7 @@
             app:srcCompat="@drawable/latestnews"
             tools:ignore="SpeakableTextPresentCheck" />
 
+        <!--News Image Button-->
         <ImageButton
             android:id="@+id/contnews"
             android:layout_width="52dp"
@@ -104,14 +114,16 @@
             android:layout_marginTop="12dp"
             android:layout_marginEnd="36dp"
             android:layout_marginBottom="612dp"
+            android:background="#24cce3"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/contlatestnews"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/btn_bar"
             app:layout_constraintTop_toBottomOf="@+id/imageView"
-            app:srcCompat="@drawable/newsnews"
+            app:srcCompat="@drawable/newnews"
             tools:ignore="SpeakableTextPresentCheck" />
 
+        <!--Fact Check Image Button-->
         <ImageButton
             android:id="@+id/contfactcheck"
             android:layout_width="52dp"
@@ -119,6 +131,7 @@
             android:layout_marginTop="12dp"
             android:layout_marginEnd="44dp"
             android:layout_marginBottom="612dp"
+            android:background="#24cce3"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/contcont"
             app:layout_constraintHorizontal_bias="1.0"
@@ -128,6 +141,7 @@
             app:srcCompat="@drawable/factcheck"
             tools:ignore="SpeakableTextPresentCheck" />
 
+        <!--Yasindu Details Button-->
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/yasibtn"
             android:layout_width="121dp"
@@ -143,6 +157,7 @@
             app:layout_constraintVertical_bias="0.277"
             tools:ignore="SpeakableTextPresentCheck" />
 
+        <!--Nikesha Details Button-->
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/nikibtn"
             android:layout_width="120dp"
@@ -158,6 +173,7 @@
             app:layout_constraintVertical_bias="0.277"
             tools:ignore="SpeakableTextPresentCheck" />
 
+        <!--Manith Details Button-->
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/manithbtn"
             android:layout_width="109dp"
@@ -174,6 +190,7 @@
             app:layout_constraintVertical_bias="0.0"
             tools:ignore="SpeakableTextPresentCheck" />
 
+        <!--Pasath Details Button-->
         <ImageButton
             android:id="@+id/pasathbtn"
             android:layout_width="110dp"
@@ -190,6 +207,7 @@
             app:layout_constraintVertical_bias="0.0"
             tools:ignore="SpeakableTextPresentCheck" />
 
+        <!--Saicharan Details Button-->
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/saichbtn"
             android:layout_width="109dp"
@@ -206,14 +224,15 @@
             app:layout_constraintVertical_bias="0.0"
             tools:ignore="SpeakableTextPresentCheck" />
 
+        <!--Meet the team-->
         <TextView
             android:id="@+id/textView6"
             android:layout_width="362dp"
             android:layout_height="42dp"
+            android:fontFamily="@font/montserrat"
             android:gravity="center"
             android:shadowColor="#FFFDFD"
-            android:text="Meet The Team"
-            android:fontFamily="@font/montserrat"
+            android:text="@string/meet_the_team"
             android:textColor="#EFEFEF"
             android:textSize="34sp"
             android:textStyle="bold"
@@ -226,4 +245,4 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+</ScrollView>

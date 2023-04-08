@@ -32,4 +32,6 @@ Q: How accurate is a fake news detection application?\n\n
 A: The accuracy of a fake news detection application depends on the quality of the algorithms and the data used to train them. Some applications have reported accuracy rates of over 90%, while others may be less accurate.\n\n
 Q: How can I use a fake news detection application?\n\n
 A: You can use a fake news detection application by copying and pasting the text of a news article into the application or by providing a link to the article. The application will then analyze the content and provide a probability or likelihood that the article is fake.\n\n</string>
+    <string name="version">Version 0.1</string>
+    <string name="meet_the_team">MEET THE TEAM</string>
 </resources>
