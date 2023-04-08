@@ -39,13 +39,16 @@
         app:layout_constraintTop_toBottomOf="@+id/menu" />
 
     <!-- Menu option 1 -->
+
+    <!-- Menu option 2 -->
+
     <TextView
         android:id="@+id/menulatestnews"
         android:layout_width="128dp"
         android:layout_height="36dp"
         android:layout_marginStart="141dp"
         android:layout_marginEnd="142dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="40dp"
         android:fontFamily="@font/montserrat"
         android:text="News"
         android:textAlignment="center"
@@ -53,16 +56,16 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/menufactcheck"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <!-- Menu option 2 -->
     <TextView
         android:id="@+id/menufactcheck"
         android:layout_width="128dp"
         android:layout_height="36dp"
         android:layout_marginStart="141dp"
         android:layout_marginEnd="142dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="48dp"
         android:fontFamily="@font/montserrat"
         android:text="Fact Check"
         android:textAlignment="center"
@@ -70,34 +73,16 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/menucontactus"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
-
-    <!-- Menu option 3 -->
-    <TextView
-        android:id="@+id/menucontactus"
-        android:layout_width="128dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="141dp"
-        android:layout_marginEnd="142dp"
-        android:layout_marginBottom="50dp"
-        android:fontFamily="@font/montserrat"
-        android:text="Contact Us"
-        android:textAlignment="center"
-        android:textColor="@color/sleepy_black"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/menufaq"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <!-- Menu option 3 -->
     <TextView
         android:id="@+id/menufaq"
         android:layout_width="128dp"
         android:layout_height="36dp"
         android:layout_marginStart="141dp"
         android:layout_marginEnd="142dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginBottom="184dp"
         android:fontFamily="@font/montserrat"
         android:text="FAQ"
         android:textAlignment="center"
@@ -107,6 +92,28 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/menucontactus"
+        android:layout_width="128dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="141dp"
+        android:layout_marginEnd="142dp"
+        android:layout_marginBottom="44dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Contact Us"
+        android:textAlignment="center"
+        android:textColor="@color/sleepy_black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/menufaq"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <!-- Menu option 3 -->
+
+    <!-- Menu option 3 -->
 
     <!-- Divider between menu title and menu options -->
     <View

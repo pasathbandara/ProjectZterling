@@ -77,72 +77,57 @@
             android:layout_width="52dp"
             android:layout_height="52dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
             android:layout_marginBottom="612dp"
             android:background="#24cce3"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/btn_bar"
-            app:layout_constraintHorizontal_bias="0.877"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/logo_bar"
             app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/team"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <!--News Image Button-->
+
+        <!--News Image Button-->
         <ImageButton
             android:id="@+id/contlatestnews"
             android:layout_width="52dp"
             android:layout_height="52dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="40dp"
+            android:layout_marginEnd="56dp"
             android:layout_marginBottom="612dp"
             android:background="#24cce3"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/contfactcheck"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/btn_bar"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
-            app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/latestnews"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-        <!--News Image Button-->
-        <ImageButton
-            android:id="@+id/contnews"
-            android:layout_width="52dp"
-            android:layout_height="52dp"
-            android:layout_marginStart="48dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="36dp"
-            android:layout_marginBottom="612dp"
-            android:background="#24cce3"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/contlatestnews"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/btn_bar"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
-            app:srcCompat="@drawable/newnews"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <!--Fact Check Image Button-->
         <ImageButton
+            android:id="@+id/contnews"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="612dp"
+            android:background="#24cce3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/newnews"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <!--Yasindu Details Button-->
+        <ImageButton
             android:id="@+id/contfactcheck"
             android:layout_width="52dp"
             android:layout_height="52dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="44dp"
+            android:layout_marginEnd="56dp"
             android:layout_marginBottom="612dp"
             android:background="#24cce3"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/contcont"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
-            app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/factcheck"
             tools:ignore="SpeakableTextPresentCheck" />
 
-        <!--Yasindu Details Button-->
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/yasibtn"
             android:layout_width="121dp"

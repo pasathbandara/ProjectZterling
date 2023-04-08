@@ -39,18 +39,18 @@ class contact_us : AppCompatActivity() {
 //toolbar
         val contnews = findViewById<android.view.View>(R.id.contnews)
         contnews.setOnClickListener {
-            val intent = Intent(this, AllNews::class.java)
+            val intent = Intent(this, MainPage::class.java)
             startActivity(intent)
             Toast.makeText(
-                applicationContext, "Going to the All News", Toast.LENGTH_SHORT
+                applicationContext, "Going to the Main Page", Toast.LENGTH_SHORT
             ).show()
         }
         val contlatestnews = findViewById<android.view.View>(R.id.contlatestnews)
-        contnews.setOnClickListener {
-            val intent = Intent(this, FakeNews::class.java)
+        contlatestnews.setOnClickListener {
+            val intent = Intent(this, AllNews::class.java)
             startActivity(intent)
             Toast.makeText(
-                applicationContext, "Going to the Fake News", Toast.LENGTH_SHORT
+                applicationContext, "Going to the All News Page", Toast.LENGTH_SHORT
             ).show()
         }
         val contfactcheck = findViewById<android.view.View>(R.id.contfactcheck)
@@ -58,7 +58,7 @@ class contact_us : AppCompatActivity() {
             val intent = Intent(this, how_we_do_it::class.java)
             startActivity(intent)
             Toast.makeText(
-                applicationContext, "Going to Fact Check", Toast.LENGTH_SHORT
+                applicationContext, "Going to Fact Check Page", Toast.LENGTH_SHORT
             ).show()
         }
         val contcont = findViewById<android.view.View>(R.id.contcont)
@@ -66,7 +66,7 @@ class contact_us : AppCompatActivity() {
             val intent = Intent(this, contact_us::class.java)
             startActivity(intent)
             Toast.makeText(
-                applicationContext, "Going to Contact Us", Toast.LENGTH_SHORT
+                applicationContext, "Already in the Contact Us", Toast.LENGTH_SHORT
             ).show()
         }
     }

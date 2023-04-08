@@ -20,6 +20,8 @@
         android:isScrollContainer="true"
         android:textStyle="italic"
         android:textAlignment="center"
+        android:scrollbars="vertical"
+        android:maxLines="10000"
         android:textAllCaps="true"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:text="Fake News to be displayed here"
