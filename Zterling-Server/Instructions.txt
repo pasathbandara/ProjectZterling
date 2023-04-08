@@ -1,0 +1,3 @@
+cmd as admin
+cd C:\Zterling-Server
+python main_two.py
