@@ -10,7 +10,7 @@
 
     <string name="howto_step1">Enter the website url along with a snippet of \nthe article you want to fact check</string>
     <string name="howto_step2">Once the button is clicked the AI will verify \nit with the database</string>
-    <string name="howto_step3">Your result is given with a percentage of accuracy \nfor your convince</string>
+    <string name="howto_step3">Your result is given with a scale of accuracy \nfor your convince</string>
     <string name="enterwebsite">Enter your news website</string>
     <string name="true_false">Your Result Here</string>
     <string name="todo">TODO</string>

@@ -12,7 +12,6 @@ class Splash : AppCompatActivity() {
         val actionBtn = findViewById<Button>(R.id.readingbtn)
         actionBtn.setOnClickListener(){
             val Intent = Intent(this, MainPage::class.java)
-            println("hi")
             startActivity(Intent)
             finish()
         }

@@ -104,34 +104,18 @@ class how_we_do_it : AppCompatActivity() {
         }
 
         // Handle clicks on other buttons
-        val newNews = findViewById<ImageButton>(R.id.newsnews)
-        newNews.setOnClickListener() {
-            val Intent = Intent(this, MainPage::class.java)
-            println("hi")
-            startActivity(Intent)
-            finish()
-        }
-        val latestNews = findViewById<ImageButton>(R.id.latestnews)
-        latestNews.setOnClickListener() {
-            val Intent = Intent(this, MainPage::class.java)
-            println("hi")
-            startActivity(Intent)
-            finish()
-        }
-        val factCheck = findViewById<ImageButton>(R.id.factcheck)
-        factCheck.setOnClickListener() {
-            val Intent = Intent(this, how_we_do_it::class.java)
-            println("hi")
-            startActivity(Intent)
-            finish()
-        }
-        val contactUs = findViewById<ImageButton>(R.id.contact)
-        factCheck.setOnClickListener() {
-            val Intent = Intent(this, contact_us::class.java)
-            println("hi")
-            startActivity(Intent)
-            finish()
-        }
+        val contnews = findViewById<android.view.View>(R.id.newsnews)
+        contnews.setOnClickListener { val intent = Intent(this, AllNews::class.java)
+            startActivity(intent)}
+        val contlatestnews = findViewById<android.view.View>(R.id.latestnews)
+        contnews.setOnClickListener { val intent = Intent(this, FakeNews::class.java)
+            startActivity(intent)}
+        val contfactcheck = findViewById<android.view.View>(R.id.factcheck)
+        contfactcheck.setOnClickListener { val intent = Intent(this, how_we_do_it::class.java)
+            startActivity(intent)}
+        val contcont = findViewById<android.view.View>(R.id.contact)
+        contcont.setOnClickListener { val intent = Intent(this, contact_us::class.java)
+            startActivity(intent)}
     }
 
     //interface for the News API used in the SDGP Test 2 application.
