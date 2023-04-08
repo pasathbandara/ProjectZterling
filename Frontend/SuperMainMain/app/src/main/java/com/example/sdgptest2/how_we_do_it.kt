@@ -105,17 +105,25 @@ class how_we_do_it : AppCompatActivity() {
 
         // Handle clicks on other buttons
         val contnews = findViewById<android.view.View>(R.id.newsnews)
-        contnews.setOnClickListener { val intent = Intent(this, AllNews::class.java)
-            startActivity(intent)}
+        contnews.setOnClickListener {
+            val intent = Intent(this, AllNews::class.java)
+            startActivity(intent)
+        }
         val contlatestnews = findViewById<android.view.View>(R.id.latestnews)
-        contnews.setOnClickListener { val intent = Intent(this, FakeNews::class.java)
-            startActivity(intent)}
+        contnews.setOnClickListener {
+            val intent = Intent(this, FakeNews::class.java)
+            startActivity(intent)
+        }
         val contfactcheck = findViewById<android.view.View>(R.id.factcheck)
-        contfactcheck.setOnClickListener { val intent = Intent(this, how_we_do_it::class.java)
-            startActivity(intent)}
+        contfactcheck.setOnClickListener {
+            val intent = Intent(this, how_we_do_it::class.java)
+            startActivity(intent)
+        }
         val contcont = findViewById<android.view.View>(R.id.contact)
-        contcont.setOnClickListener { val intent = Intent(this, contact_us::class.java)
-            startActivity(intent)}
+        contcont.setOnClickListener {
+            val intent = Intent(this, contact_us::class.java)
+            startActivity(intent)
+        }
     }
 
     //interface for the News API used in the SDGP Test 2 application.

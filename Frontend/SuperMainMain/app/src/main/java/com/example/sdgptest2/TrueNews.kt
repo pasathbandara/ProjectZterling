@@ -40,7 +40,10 @@ class TrueNews : AppCompatActivity() {
         try {
             // Call the API
             newsApiService.getNews().enqueue(object : Callback<List<AllNews.News>> {
-                override fun onResponse(call: Call<List<AllNews.News>>, response: Response<List<AllNews.News>>) {
+                override fun onResponse(
+                    call: Call<List<AllNews.News>>,
+                    response: Response<List<AllNews.News>>
+                ) {
                     if (response.isSuccessful) {
                         val newsList = response.body()
 
