@@ -21,10 +21,10 @@
         tools:ignore="HardcodedDebugMode"
         tools:targetApi="31">
         <activity
-            android:name=".faq"
+            android:name=".Faq"
             android:exported="false" />
         <activity
-            android:name=".burgerMenu"
+            android:name=".BurgerMenu"
             android:exported="false" />
         <activity
             android:name=".YasinduDetails"

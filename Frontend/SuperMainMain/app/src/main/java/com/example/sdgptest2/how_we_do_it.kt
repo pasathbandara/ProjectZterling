@@ -25,7 +25,8 @@ class how_we_do_it : AppCompatActivity() {
     // Variable declarations for UI components
     var editTextTextMultiLine: EditText? = null
     var editTextTextMultiLine2: EditText? = null
-    var button2: Button? = null
+
+    //    var button2: Button? = null
     var true_false: TextView? = null
 
     // Retrofit setup
@@ -62,7 +63,8 @@ class how_we_do_it : AppCompatActivity() {
                 Toast.makeText(
                     applicationContext, "Device is connected to the Internet." +
                             "\nApplication Functionalities will be done using Flask API",
-                    Toast.LENGTH_SHORT).show()
+                    Toast.LENGTH_SHORT
+                ).show()
                 val url = editTextTextMultiLine!!.text.toString()
                 val news = editTextTextMultiLine2!!.text.toString()
 
@@ -80,17 +82,19 @@ class how_we_do_it : AppCompatActivity() {
                             println("Response Generated")
                             Toast.makeText(
                                 applicationContext, "Response Generated",
-                                Toast.LENGTH_SHORT).show()
+                                Toast.LENGTH_SHORT
+                            ).show()
                             val result = response.body()!!["result"] as String
                             val reliabilityRating =
                                 response.body()!!["reliability_rating"] as Double
                             true_false!!.text = "$result: $reliabilityRating/5)"
-                            println(result + " " + reliabilityRating)
+//                            println(result + " " + reliabilityRating)
                         } else {
                             println("Response Unsuccessful")
                             Toast.makeText(
                                 applicationContext, "Response Unsuccessful",
-                                Toast.LENGTH_SHORT).show()
+                                Toast.LENGTH_SHORT
+                            ).show()
                         }
                     }
 
@@ -98,7 +102,8 @@ class how_we_do_it : AppCompatActivity() {
                         println("Connection Failed \n${t.message}")
                         Toast.makeText(
                             applicationContext, "Connection Failed \n${t.message}",
-                            Toast.LENGTH_SHORT).show()
+                            Toast.LENGTH_SHORT
+                        ).show()
                     }
                 })
             }
@@ -167,7 +172,8 @@ class how_we_do_it : AppCompatActivity() {
             applicationContext, "Device isn't connected to the Internet." +
                     "\nApplication Functionalities will be done using chaqoupy framework" +
                     "\nYou might experience crashes and bugs",
-            Toast.LENGTH_SHORT).show()
+            Toast.LENGTH_SHORT
+        ).show()
         if (!Python.isStarted()) Python.start(AndroidPlatform(context))
 
         val py = Python.getInstance()

@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="#16161D"
     tools:context=".YasinduDetails">
+
     <TextView
         android:id="@+id/semi"
         android:layout_width="410dp"
@@ -50,10 +51,10 @@
         android:layout_width="334dp"
         android:layout_height="129dp"
         android:background="#16161D"
+        android:fontFamily="@font/montserrat"
         android:text="@string/Yasindu_Info"
         android:textAlignment="center"
         android:textColor="#F8F8F8"
-        android:fontFamily="@font/montserrat"
         android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -68,10 +69,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="154dp"
-        android:fontFamily="@font/montserrat"
         android:layout_marginTop="22dp"
         android:layout_marginEnd="164dp"
         android:background="@drawable/roundbtnselector"
+        android:fontFamily="@font/montserrat"
         android:text="Back"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

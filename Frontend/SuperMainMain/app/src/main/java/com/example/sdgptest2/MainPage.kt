@@ -12,8 +12,8 @@ class MainPage : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val burgmenu = findViewById<ImageButton>(R.id.burgmenu)
-        burgmenu.setOnClickListener(){
-            val Intent = Intent(this, burgerMenu::class.java)
+        burgmenu.setOnClickListener() {
+            val Intent = Intent(this, BurgerMenu::class.java)
             startActivity(Intent)
             finish()
         }

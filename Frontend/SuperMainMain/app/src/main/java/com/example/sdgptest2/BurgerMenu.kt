@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 
-class burgerMenu : AppCompatActivity() {
+class BurgerMenu : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_burger_menu)
@@ -36,7 +36,7 @@ class burgerMenu : AppCompatActivity() {
         }
         val menufaq = findViewById<android.view.View>(R.id.menufaq)
         menufaq.setOnClickListener {
-            val intent = Intent(this, faq::class.java)
+            val intent = Intent(this, Faq::class.java)
             startActivity(intent)
             Toast.makeText(
                 applicationContext, "Going to FAQ", Toast.LENGTH_SHORT).show()

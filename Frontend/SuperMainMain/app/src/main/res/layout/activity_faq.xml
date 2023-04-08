@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/sleepy_black"
-    tools:context=".faq">
+    tools:context=".Faq">
 
     <!-- The TextView that displays the title of the FAQ section -->
     <TextView
@@ -19,10 +18,10 @@
         android:layout_marginBottom="55dp"
         android:background="@drawable/shadowbox"
         android:fontFamily="@font/montserrat"
+        android:maxLines="10000"
+        android:scrollbars="vertical"
         android:text="@string/faq"
         android:textAlignment="center"
-        android:scrollbars="vertical"
-        android:maxLines="10000"
         android:textColor="#000000"
         android:textSize="12sp"
         android:textStyle="italic"

@@ -26,10 +26,9 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:background="#24cce3"
-        app:srcCompat="@drawable/menu"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/semi"
-         />
+        app:srcCompat="@drawable/menu" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -72,9 +71,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="154dp"
         android:layout_marginTop="22dp"
-        android:fontFamily="@font/montserrat"
         android:layout_marginEnd="154dp"
         android:background="@drawable/roundbtnselector"
+        android:fontFamily="@font/montserrat"
         android:text="Back"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -9,7 +9,7 @@ class ManithDetails : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_manith_details)
 
-            val button = findViewById<android.view.View>(R.id.backbtn)
+        val button = findViewById<android.view.View>(R.id.backbtn)
         button.setOnClickListener {
             val intent = Intent(this, contact_us::class.java)
             startActivity(intent)
@@ -17,7 +17,7 @@ class ManithDetails : AppCompatActivity() {
 
         val burgmenu = findViewById<android.view.View>(R.id.burgmenu)
         burgmenu.setOnClickListener {
-            val intent = Intent(this, burgerMenu::class.java)
+            val intent = Intent(this, BurgerMenu::class.java)
             startActivity(intent)
         }
     }

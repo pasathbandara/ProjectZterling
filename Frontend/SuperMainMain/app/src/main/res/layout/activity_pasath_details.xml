@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="#16161D"
     android:background="@drawable/fake_news_background_image_"
+    android:backgroundTint="#16161D"
     tools:context=".PasathDetails">
+
     <TextView
         android:id="@+id/semi"
         android:layout_width="410dp"
@@ -50,8 +51,8 @@
         android:layout_width="335dp"
         android:layout_height="150dp"
         android:layout_marginTop="55dp"
-        android:fontFamily="@font/montserrat"
         android:background="#16161D"
+        android:fontFamily="@font/montserrat"
         android:text="@string/Pasath_Info"
         android:textAlignment="center"
         android:textColor="#F6F5F5"
@@ -72,8 +73,8 @@
         android:layout_marginStart="154dp"
         android:layout_marginTop="22dp"
         android:layout_marginEnd="154dp"
-        android:fontFamily="@font/montserrat"
         android:background="@drawable/roundbtnselector"
+        android:fontFamily="@font/montserrat"
         android:text="Back"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

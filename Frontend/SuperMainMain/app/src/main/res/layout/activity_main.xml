@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <androidx.constraintlayout.widget.ConstraintLayout
 
         android:layout_width="match_parent"
@@ -314,9 +314,9 @@
             android:fontFamily="@font/montserrat"
             android:text="View All News"
             android:textAlignment="center"
+            android:textColor="#FFFFFF"
             android:textSize="16sp"
             android:textStyle="italic"
-            android:textColor="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="@+id/textView18"
             app:layout_constraintEnd_toEndOf="@+id/textView18"
             app:layout_constraintHorizontal_bias="0.8"
@@ -346,9 +346,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="181dp"
             android:layout_marginBottom="10dp"
+            android:fontFamily="@font/montserrat"
             android:shadowColor="#FBF7F7"
             android:text="Read More >>"
-            android:fontFamily="@font/montserrat"
             android:textColor="#F4F4F4"
             app:layout_constraintBottom_toBottomOf="@+id/textView21"
             app:layout_constraintEnd_toEndOf="@+id/textView21"
