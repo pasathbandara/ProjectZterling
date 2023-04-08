@@ -1,6 +1,7 @@
 package com.example.sdgptest2
 
 import android.Manifest
+import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
@@ -10,31 +11,57 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.opencsv.CSVReader
+import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.http.GET
 import java.io.FileReader
 
 class TrueNews : AppCompatActivity() {
     private lateinit var textView: TextView
 
+    // Retrofit setup
+    val retrofit = Retrofit.Builder()
+        .baseUrl("http://192.168.1.2:5000") // Replace <your_ip_address> with your computer's IP address
+        .addConverterFactory(GsonConverterFactory.create())
+        .build()
+
+    val newsApiService = retrofit.create(TrueNews.TrueNewsService::class.java)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_true_news)
-
         textView = findViewById(R.id.truenewstextview)
 
-        // Request READ_EXTERNAL_STORAGE permission if not already granted
-        if (ContextCompat.checkSelfPermission(
-                this,
-                Manifest.permission.READ_EXTERNAL_STORAGE
-            ) != PackageManager.PERMISSION_GRANTED
-        ) {
-            ActivityCompat.requestPermissions(
-                this,
-                arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE),
-                PERMISSION_REQUEST_CODE
-            )
-        } else {
-            displayTrueNews()
+        try {
+            // Call the API
+            newsApiService.getNews().enqueue(object : Callback<List<AllNews.News>> {
+                override fun onResponse(call: Call<List<AllNews.News>>, response: Response<List<AllNews.News>>) {
+                    if (response.isSuccessful) {
+                        val newsList = response.body()
+
+                        // Display the news in the TextView
+                        textView.text = newsList?.joinToString(separator = "\n\n") {
+                            "${it.title}\n${it.text}\n${it.domain}\n${it.validity}\n${it.rating}"
+                        }
+                    }
+                }
+
+                override fun onFailure(call: Call<List<AllNews.News>>, t: Throwable) {
+                    println("Error: \n${t.message}")
+                }
+            })
         }
+        // Read Local Database (Offline Mode)
+        catch (e: Exception) {
+            println(e.printStackTrace())
+            offlineRetrieveTrue(this)
+        }
+
     }
 
     private fun displayTrueNews() {
@@ -93,5 +120,37 @@ class TrueNews : AppCompatActivity() {
 
     companion object {
         private const val PERMISSION_REQUEST_CODE = 1
+    }
+
+    fun offlineRetrieveTrue(context: Context) {
+        println("Reading from local database ")
+        // Request READ_EXTERNAL_STORAGE permission if not already granted
+        if (ContextCompat.checkSelfPermission(
+                this,
+                Manifest.permission.READ_EXTERNAL_STORAGE
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            ActivityCompat.requestPermissions(
+                this,
+                arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE),
+                PERMISSION_REQUEST_CODE
+            )
+        } else {
+            displayTrueNews()
+        }
+    }
+
+    @JsonClass(generateAdapter = true)
+    data class News(
+        @Json(name = "title") val title: String,
+        @Json(name = "text") val text: String,
+        @Json(name = "domain") val domain: String,
+        @Json(name = "validity") val validity: String,
+        @Json(name = "rating") val rating: String
+    )
+
+    interface TrueNewsService {
+        @GET("/true_news")
+        fun getNews(): Call<List<AllNews.News>>
     }
 }

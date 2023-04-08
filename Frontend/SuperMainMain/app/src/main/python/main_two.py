@@ -72,14 +72,27 @@ def validate_news():
     else:
         return jsonify({'error': 'Model file not found'})
 
+@app.route('/all_news', methods=['GET'])
 def retrieve_all_news():
     all_news_list = retrieve_news(join(dirname(__file__), "Database/All_DB.csv"))
-    return all_news_list
+    news_dicts = []
+    for news in all_news_list:
+        news_dict = {
+            "title": news[0],
+            "text": news[1],
+            "domain": news[2],
+            "validity": news[3],
+            "rating": news[4]
+        }
+        news_dicts.append(news_dict)
+    return jsonify(news_dicts)
 
+@app.route('/true_news', methods=['GET'])
 def retrieve_true_news():
     true_news_list = retrieve_news(join(dirname(__file__), "Database/True_DB.csv"))
     return true_news_list
 
+@app.route('/fake_news', methods=['GET'])
 def retrieve_fake_news():
     fake_news_list = retrieve_news(join(dirname(__file__), "Database/Fake_DB.csv"))
     return fake_news_list

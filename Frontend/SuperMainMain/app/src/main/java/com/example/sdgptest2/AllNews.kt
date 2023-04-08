@@ -1,6 +1,7 @@
 package com.example.sdgptest2
 
 import android.Manifest
+import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.os.Environment
@@ -9,31 +10,60 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.opencsv.CSVReader
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.http.GET
 import java.io.FileReader
+import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 class AllNews : AppCompatActivity() {
 
     private lateinit var textView: TextView
 
+    // Retrofit setup
+    val retrofit = Retrofit.Builder()
+        .baseUrl("http://192.168.1.2:5000") // Replace <your_ip_address> with your computer's IP address
+        .addConverterFactory(GsonConverterFactory.create())
+        .build()
+
+    // Create Retrofit Service
+    val newsApiService = retrofit.create(NewsService::class.java)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_all_news)
-        textView = findViewById(R.id.allnewstextview)
+        textView = findViewById(R.id.allnewstextview) as TextView
 
-        // Request READ_EXTERNAL_STORAGE permission if not already granted
-        if (ContextCompat.checkSelfPermission(
-                this,
-                Manifest.permission.READ_EXTERNAL_STORAGE
-            ) != PackageManager.PERMISSION_GRANTED
-        ) {
-            ActivityCompat.requestPermissions(
-                this,
-                arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE),
-                PERMISSION_REQUEST_CODE
-            )
-        } else {
-            displayAllDB()
+        try {
+            // Call the API
+            newsApiService.getNews().enqueue(object : Callback<List<News>> {
+                override fun onResponse(call: Call<List<News>>, response: Response<List<News>>) {
+                    if (response.isSuccessful) {
+                        val newsList = response.body()
+
+                        // Display the news in the TextView
+                        textView.text = newsList?.joinToString(separator = "\n\n") {
+                            "${it.title}\n${it.text}\n${it.domain}\n${it.validity}\n${it.rating}"
+                        }
+                    }
+                }
+
+                override fun onFailure(call: Call<List<News>>, t: Throwable) {
+                    textView.text = "Error: ${t.message}"
+
+                }
+            })
         }
+        // Read Local Database (Offline Mode)
+        catch (e: Exception) {
+            println(e.printStackTrace())
+            offlineRetrieveAll(this)
+        }
+
     }
 
     private fun displayAllDB() {
@@ -93,4 +123,37 @@ class AllNews : AppCompatActivity() {
     companion object {
         private const val PERMISSION_REQUEST_CODE = 1
     }
+
+    fun offlineRetrieveAll(context: Context) {
+        println("Reading from local database ")
+        // Request READ_EXTERNAL_STORAGE permission if not already granted
+        if (ContextCompat.checkSelfPermission(
+                this,
+                Manifest.permission.READ_EXTERNAL_STORAGE
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            ActivityCompat.requestPermissions(
+                this,
+                arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE),
+                PERMISSION_REQUEST_CODE
+            )
+        } else {
+            displayAllDB()
+        }
+    }
+
+    @JsonClass(generateAdapter = true)
+    data class News(
+        @Json(name = "title") val title: String,
+        @Json(name = "text") val text: String,
+        @Json(name = "domain") val domain: String,
+        @Json(name = "validity") val validity: String,
+        @Json(name = "rating") val rating: String
+    )
+
+    interface NewsService {
+        @GET("/all_news")
+        fun getNews(): Call<List<News>>
+    }
+
 }

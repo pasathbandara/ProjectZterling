@@ -37,6 +37,7 @@ class how_we_do_it : AppCompatActivity() {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
+    // Create Retrofit Service
     val api = retrofit.create(NewsApi::class.java)
 
     // onCreate() method
