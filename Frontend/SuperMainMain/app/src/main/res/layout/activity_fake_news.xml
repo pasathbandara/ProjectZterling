@@ -19,7 +19,7 @@
 
         <!-- The TextView to display the true news -->
         <TextView
-            android:id="@+id/truenewstextview"
+            android:id="@+id/fakenewstextview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="37dp"
