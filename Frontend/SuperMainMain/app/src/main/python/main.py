@@ -1,101 +1,29 @@
-import sys
-# print("Here YOU GO: "+sys.path)
-print(sys.path)
-
-# sys.path.insert(0, '/Lib/site-packages')
-# sys.path =[]
-
-sys.path.append('/data/data/com.example.sdgptest2/files/chaquopy/AssetFinder/app')
-sys.path.append('/data/data/com.example.sdgptest2/files/chaquopy/AssetFinder/app/CustomLibrary')
-
-# ['',  'C:\\Python310\\python310.zip',  'C:\\Python310\\DLLs',  'C:\\Python310\\lib',  'C:\\Python310',  'C:\\Python310\\lib\\site-packages']
-
-print(sys.path)
-
+# import sys
+# print(sys.path)
 # import string
 # from nltk.corpus import stopwords
-
 # import requests
 # from bs4 import BeautifulSoup
 # from urllib.request import urlopen
 # import urllib
 # import pandas as pd
-
 import os
-
 # import csv
-
 import dill
 # from os.path import dirname, join
-
 # os.getcwd()
 # os.chdir(join(dirname(__file__), "python"))
 # import scipy
-
 # import sys
-
-
 # from sklearn.feature_extraction.text import CountVectorizer
 # from sklearn.feature_extraction.text import TfidfTransformer
 # from sklearn.naive_bayes import MultinomialNB
 # from sklearn.metrics import classification_report
 # from sklearn.model_selection import train_test_split
 # from sklearn.pipeline import Pipeline
-
 # import sklearn
 
 def validate_news(url, news):
-    # import sys
-    # scipy_path = "/absosdslute/path/to/scipy"
-    # sys.path.append(scipy_path)
-    # print (sys.path)
-    # import scipy
-    # print ("Current working dir : %s" % os.getcwd())
-    # os.chdir("C:/Users/MSI/AppData/Local/Programs/Python/Python310/Lib/site-packages")
-    # print ("Current working dir : %s" % os.getcwd())
-
-    # import scipy
-    # scipy_dir = os.path.dirname(scipy.__file__)
-    # current_dir = os.getcwd()
-    #
-    # if current_dir == scipy_dir:
-    #     print("You are in the SciPy source tree.")
-    # else:
-    #     print("You are not in the SciPy source tree.")
-
-
-    # # https://stackoverflow.com/questions/11069309/python-import-scipy-leads-to-traceback-referencing-a-deleted-file
-    # import sys
-    # print (sys.path)
-
-
-    # https://stackoverflow.com/questions/11069309/python-import-scipy-leads-to-traceback-referencing-a-deleted-file
-
-    directory_to_remove = "/data/data/com.example.sdgptest2/files/chaquopy/AssetFinder/app"
-    directory_to_remove2 = "/data/data/com.example.sdgptest2/files/chaquopy/AssetFinder/requirements"
-    directory_to_remove3 = "/data/data/com.example.sdgptest2/files/chaquopy/AssetFinder/stdlib-x86"
-    directory_to_remove4 = "/data/user/0/com.example.sdgptest2/files/chaquopy/stdlib-common.imy"
-    directory_to_remove5 = "/data/user/0/com.example.sdgptest2/files/chaquopy/bootstrap.imy"
-    directory_to_remove6 = "/data/user/0/com.example.sdgptest2/files/chaquopy/bootstrap-native/x86"
-    # sys.path.remove(directory_to_remove)
-    # sys.path.remove(directory_to_remove2)
-    # sys.path.remove(directory_to_remove3)
-    # sys.path.remove(directory_to_remove4)
-    # sys.path.remove(directory_to_remove5)
-    # sys.path.remove(directory_to_remove6)
-
-    directory_to_add = "/data/data/com.example.sdgptest2/files/chaquopy/AssetFinder"
-    # sys.path.append(directory_to_add)
-
-    # if directory_to_remove in sys.path:
-    #     print("removed               : ")
-    #     sys.path.remove(directory_to_remove)
-
-    # print(sys.path)
-
-    # path_str = ';'.join(sys.path)
-    # sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
-
     try:
         headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'}
         html = requests.get(url, headers=headers)
@@ -109,17 +37,11 @@ def validate_news(url, news):
 
     full_content = news_title + " " + news
 
-    # print(dirname(__file__))
-
     file_path = "/data/data/com.example.sdgptest2/files/chaquopy/AssetFinder/app/detector_pipeline.dill"
     if(os.path.getsize(file_path) > 0):
         with open(file_path, 'rb') as detector_file:
-            # Move one directory back
-            # cd ..
-            # #
             detector_pipeline = dill.load(detector_file)
             result = detector_pipeline.predict([[full_content]])[0]
-            # print(result)
             rating = detector_pipeline.predict_proba([[full_content]])[0][1]
             # print(rating)     ## Prints two values 1.Probability of the news being Fake, 2. Probability of the news being True, P(F)+P(T)=1
             ## Prints the Probability of the news being True which can be used for the rating

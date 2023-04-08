@@ -2,16 +2,18 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'com.chaquo.python'
+    id 'kotlin-android'
 }
 
 android {
     namespace 'com.example.sdgptest2'
-    compileSdk 33
+    compileSdkVersion 33
+    buildToolsVersion "32.0.0"
 
     defaultConfig {
         applicationId "com.example.sdgptest2"
-        minSdk 24
-        targetSdk 33
+        minSdkVersion 21
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
 
@@ -23,7 +25,6 @@ android {
             main {
                 python {
                     srcDirs = ["src/main/python"]
-//                    srcDirs = ["src/main/assets/"]
                 }
             }
         }
@@ -33,83 +34,46 @@ android {
 //            buildPython "C:/Users/MSI/AppData/Local/Programs/Python/Python310/python.exe"
             buildPython "python3"
 
-//            pip {
-//                install "numpy"
-//                install "nltk"
-//                install "requests"
-//                install "bs4"
-//                install "pandas"
-//                install "dill"
-//            }
-        }
-//
-//        has to come inside python {
-//            pip{}
-//        }
-//            pip {
-//                install "numpy"
-//                install "nltk"
-//                install "requests"
-//                install "bs4"
-//                install "pandas"
-//                install "dill"
-////                install "scikit-learn"
-//
-////                install from nltk.corpus import stopwords
-////                from bs4 import BeautifulSoup
-////                import pandas as pd
-//
-////                install "string" Could not find a version that satisfies the requirement sssss
-////                install "urllib" Could not find a version that satisfies the requirement
-////                from urllib.request import urlopen
-////                install "os" Could not find a version that satisfies the requirement
-////                install "csv" Could not find a version that satisfies the requirement
-//            }
+            ndk {
+                abiFilters "armeabi-v7a", "x86"
+            }
 
-        ndk {
-            abiFilters "armeabi-v7a", "x86"
+            testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         }
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        buildTypes {
+            release {
+                minifyEnabled false
+                proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            }
+        }
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+        kotlinOptions {
+            jvmTarget = '1.8'
         }
     }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = '1.8'
+
+    dependencies {
+        implementation "org.jetbrains.kotlin:kotlin-stdlib"
+        implementation 'androidx.core:core-ktx:1.7.0'
+        implementation 'androidx.appcompat:appcompat:1.6.1'
+        implementation 'com.google.android.material:material:1.8.0'
+        implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+        testImplementation 'junit:junit:4.13.2'
+        androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+        androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+        implementation 'com.opencsv:opencsv:5.4'
+        implementation 'com.android.support:multidex:1.0.3'
+        implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+        implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+        implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+        implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+        implementation 'com.opencsv:opencsv:5.5.1'
+        implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0'
+        implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0'
+        implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
     }
 }
-
-dependencies {
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.8.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-    implementation 'com.opencsv:opencsv:5.4'
-    implementation 'com.android.support:multidex:1.0.3'
-}
-
-////task installPythonPackage(type: Exec) {
-////    commandLine 'pip', 'install', '.'
-////    workingDir "${projectDir}/src/main/python"
-////}
-////
-////task buildJava(dependsOn: 'installPythonPackage') {
-////    // Define the tasks to run when building the Java project
-////    doLast {
-////        // Run the Java build tasks
-////        gradleBuild = project.gradle.startBuild()
-////        gradleBuild.forTasks('clean', 'build').run()
-////    }
-////}
