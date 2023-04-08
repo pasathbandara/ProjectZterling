@@ -25,6 +25,7 @@
             android:layout_marginBottom="56dp"
             android:background="@drawable/shadowbox"
             android:fontFamily="@font/montserrat"
+            android:isScrollContainer="true"
             android:maxLines="10000"
             android:scrollbars="vertical"
             android:text="All True news to be displayed here"
@@ -35,6 +36,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
