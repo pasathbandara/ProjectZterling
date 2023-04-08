@@ -2,11 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/fakenews_layout"
+    android:id="@+id/truenews_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/sleepy_black"
-    tools:context=".FakeNews">
+    tools:context=".TrueNews">
 
     <!-- A ScrollView to make the layout scrollable -->
     <ScrollView
@@ -17,9 +17,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <!-- The TextView to display the fake news -->
+        <!-- The TextView to display the true news -->
         <TextView
-            android:id="@+id/fakenewstextview"
+            android:id="@+id/truenewstextview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="37dp"
@@ -34,11 +34,10 @@
             android:scrollbarAlwaysDrawVerticalTrack="true"
             android:scrollbarStyle="insideInset"
             android:scrollbars="vertical"
-            android:text="Fake News to be displayed here"
-            android:textAlignment="textStart"
+            android:text="All True news to be displayed here"
+            android:textAlignment="viewStart"
             android:textAllCaps="false"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-            android:verticalScrollbarPosition="right" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
     </ScrollView>
 
