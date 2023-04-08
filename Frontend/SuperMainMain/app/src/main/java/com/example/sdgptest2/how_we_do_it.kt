@@ -7,10 +7,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageButton
-import android.widget.TextView
+import android.widget.*
 import com.chaquo.python.PyObject
 import com.chaquo.python.Python
 import com.chaquo.python.android.AndroidPlatform
@@ -62,6 +59,10 @@ class how_we_do_it : AppCompatActivity() {
                     "Device is connected to the Internet. " +
                             "\nApplication Functionalities will be done using Flask API"
                 )
+                Toast.makeText(
+                    applicationContext, "Device is connected to the Internet." +
+                            "\nApplication Functionalities will be done using Flask API",
+                    Toast.LENGTH_SHORT).show()
                 val url = editTextTextMultiLine!!.text.toString()
                 val news = editTextTextMultiLine2!!.text.toString()
 
@@ -77,6 +78,9 @@ class how_we_do_it : AppCompatActivity() {
                         if (response.isSuccessful) {
                             // Handle successful response
                             println("Response Generated")
+                            Toast.makeText(
+                                applicationContext, "Response Generated",
+                                Toast.LENGTH_SHORT).show()
                             val result = response.body()!!["result"] as String
                             val reliabilityRating =
                                 response.body()!!["reliability_rating"] as Double
@@ -84,11 +88,17 @@ class how_we_do_it : AppCompatActivity() {
                             println(result + " " + reliabilityRating)
                         } else {
                             println("Response Unsuccessful")
+                            Toast.makeText(
+                                applicationContext, "Response Unsuccessful",
+                                Toast.LENGTH_SHORT).show()
                         }
                     }
 
                     override fun onFailure(call: Call<Map<String, Any>>, t: Throwable) {
                         println("Connection Failed \n${t.message}")
+                        Toast.makeText(
+                            applicationContext, "Connection Failed \n${t.message}",
+                            Toast.LENGTH_SHORT).show()
                     }
                 })
             }
@@ -141,6 +151,11 @@ class how_we_do_it : AppCompatActivity() {
                     "\nApplication Functionalities will be done using chaqoupy framework" +
                     "\nYou might experience crashes and bugs"
         )
+        Toast.makeText(
+            applicationContext, "Device isn't connected to the Internet." +
+                    "\nApplication Functionalities will be done using chaqoupy framework" +
+                    "\nYou might experience crashes and bugs",
+            Toast.LENGTH_SHORT).show()
         if (!Python.isStarted()) Python.start(AndroidPlatform(context))
 
         val py = Python.getInstance()

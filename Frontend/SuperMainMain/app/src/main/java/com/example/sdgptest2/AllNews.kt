@@ -6,6 +6,7 @@ import android.content.pm.PackageManager
 import android.os.Bundle
 import android.os.Environment
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -97,10 +98,16 @@ class AllNews : AppCompatActivity() {
         } catch (e: Exception) {
             e.printStackTrace()
             textView.text = "Error retrieving data from file"
+            // makes a toast message of the above code
+            Toast.makeText(
+                applicationContext, "Error retrieving data from file", Toast.LENGTH_SHORT).show()
         }
 
         if (allDBList.isEmpty()) {
             textView.text = "File is empty"
+            // makes a toast message of the above code
+            Toast.makeText(
+                applicationContext, "File is empty", Toast.LENGTH_SHORT).show()
         }
 
         return allDBList
@@ -126,6 +133,8 @@ class AllNews : AppCompatActivity() {
 
     fun offlineRetrieveAll(context: Context) {
         println("Reading from local database ")
+        Toast.makeText(
+            applicationContext, "Reading from local database ", Toast.LENGTH_SHORT).show()
         // Request READ_EXTERNAL_STORAGE permission if not already granted
         if (ContextCompat.checkSelfPermission(
                 this,
