@@ -44,8 +44,8 @@ class FakeNews : AppCompatActivity() {
                         val newsList = response.body()
 
                         // Display the news in the TextView
-                        textView.text = newsList?.joinToString(separator = "\n\n") {
-                            "${it.title}\n${it.text}\n${it.domain}\n${it.validity}\n${it.rating}"
+                        textView.text = newsList?.joinToString(separator = "\n\n\n\n") {
+                            "-TOPIC-\n\n ${it.title}\n\n${it.text}\n\nDomain: ${it.domain}\n\nValidity: ${it.validity}\n\nRating: ${it.rating}"
                         }
                     }
                 }
@@ -151,7 +151,7 @@ class FakeNews : AppCompatActivity() {
     )
 
     interface FakeNewsService {
-        @GET("/true_news")
+        @GET("/fake_news")
         fun getNews(): Call<List<AllNews.News>>
     }
 }
