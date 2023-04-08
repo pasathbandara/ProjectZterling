@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Create a shadow effect around the shape -->
+    <item
+        android:bottom="0dp"
+        android:drawable="@android:drawable/dialog_holo_light_frame"
+        android:left="0dp"
+        android:right="0dp"
+        android:top="0dp"
+        android:radius="10dp">
+    </item>
+
+    <!-- Define the background shape -->
+    <item
+        android:bottom="0dp"
+        android:left="0dp"
+        android:right="0dp"
+        android:top="0dp"
+        android:radius="10dp">
+
+        <!-- Define the gradient for the shape -->
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#dbd4d3"
+                android:centerColor="#4DD0E1"
+                android:endColor="#34d5eb"
+                android:angle="270" />
+            <corners android:radius="2.3dp" />
+        </shape>
+    </item>
+</layer-list>
+<!--    <?xml version="1.0" encoding="utf-8"?>-->
+<!--<selector xmlns:android="http://schemas.android.com/apk/res/android">-->
+<!--<item>-->
+<!--    <shape android:shape="rectangle">-->
+<!--        &lt;!&ndash;            <stroke android:width="2dp" android:color="@color/purple_700" />&ndash;&gt;-->
+<!--        <corners android:radius="10dp" />-->
+<!--        <gradient-->
+<!--            android:startColor="#dbd4d3"-->
+<!--            android:endColor="#34d5eb"-->
+<!--            android:angle="90" />-->
+<!--    </shape>-->
+<!--</item>-->
+
+<!--</selector>-->
