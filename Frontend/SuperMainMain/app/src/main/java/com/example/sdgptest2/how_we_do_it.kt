@@ -1,5 +1,7 @@
+// Package declaration
 package com.example.sdgptest2
 
+// Import statements
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -19,12 +21,15 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.Body
 import retrofit2.http.POST
 
+// Class declaration for "how_we_do_it" activity
 class how_we_do_it : AppCompatActivity() {
+    // Variable declarations for UI components
     var editTextTextMultiLine: EditText? = null
     var editTextTextMultiLine2: EditText? = null
     var button2: Button? = null
     var true_false: TextView? = null
 
+    // Retrofit setup
     val retrofit = Retrofit.Builder()
         .baseUrl("http://192.168.1.2:5000") // Replace <your_ip_address> with your computer's IP address
         .addConverterFactory(GsonConverterFactory.create())
@@ -32,22 +37,29 @@ class how_we_do_it : AppCompatActivity() {
 
     val api = retrofit.create(NewsApi::class.java)
 
+    // onCreate() method
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // Set content view for activity
         setContentView(R.layout.activity_how_we_do_it)
+
+        // Initialize UI components
         editTextTextMultiLine = findViewById<View>(R.id.editTextTextMultiLine) as EditText
         editTextTextMultiLine2 = findViewById<View>(R.id.editTextTextMultiLine2) as EditText
 
         true_false = findViewById<View>(R.id.true_false) as TextView
 
-
+        // Handle button click
         val actionBtn = findViewById<Button>(R.id.urlcheck)
         actionBtn.setOnClickListener() {
             val url = editTextTextMultiLine!!.text.toString()
             val news = editTextTextMultiLine2!!.text.toString()
 
+            // Prepare data for API request
             val data = mapOf("url" to url, "news" to news)
 
+            // Send API request
             api.validateNews(data).enqueue(object : Callback<Map<String, Any>> {
                 override fun onResponse(
                     call: Call<Map<String, Any>>,
@@ -71,28 +83,7 @@ class how_we_do_it : AppCompatActivity() {
             })
         }
 
-
-//////////////----------------------------- THE BELOW CODE IS TO BE USED WHEN THE USER IS NOT CONNECTED TO INTERNET---------------------------------------------------
-
-//        if (!Python.isStarted()) Python.start(AndroidPlatform(this))
-//        val py = Python.getInstance()
-
-//        val actionBtn = findViewById<Button>(R.id.urlcheck)
-//        actionBtn.setOnClickListener(){
-//            actionBtn.setOnClickListener {
-////                simple function for testing
-////                val pyobj = py.getModule("hello_user")
-////                val obj = pyobj.callAttr("helloworld").toString()
-////                true_false!!.text = obj
-////                println(obj)
-//
-//                val pyobj = py.getModule("main")
-//                val obj = pyobj.callAttr("validate_news", editTextTextMultiLine!!.text.toString(), editTextTextMultiLine2!!.text.toString()) as List<PyObject>
-//                true_false!!.text = "obj.toString()"
-//                println("\n"+obj)
-//            }
-//        }
-
+        // Handle clicks on other buttons
         val newNews = findViewById<ImageButton>(R.id.newsnews)
         newNews.setOnClickListener() {
             val Intent = Intent(this, MainPage::class.java)
@@ -122,9 +113,37 @@ class how_we_do_it : AppCompatActivity() {
             finish()
         }
     }
+
+    //interface for the News API used in the SDGP Test 2 application.
     interface NewsApi {
         @POST("/validate_news")
         fun validateNews(@Body data: Map<String, String>): Call<Map<String, Any>>
     }
 
+/*
+----------------------------- THE BELOW CODE IS TO BE USED WHEN THE USER IS NOT CONNECTED TO INTERNET---------------------------------------------------
+
+        if (!Python.isStarted()) Python.start(AndroidPlatform(this))
+
+        val py = Python.getInstance()
+
+        val actionBtn = findViewById<Button>(R.id.urlcheck)
+        actionBtn.setOnClickListener(){
+            actionBtn.setOnClickListener {
+                /*  To Test A Function - Offline Mode
+                simple function for testing
+                val pyobj = py.getModule("hello_user")
+                val obj = pyobj.callAttr("helloworld").toString()
+                true_false!!.text = obj
+                println(obj)
+                 */
+
+                val pyobj = py.getModule("main")
+                val obj = pyobj.callAttr("validate_news", editTextTextMultiLine!!.text.toString(), editTextTextMultiLine2!!.text.toString()) as List<PyObject>
+                true_false!!.text = "obj.toString()"
+                println("\n"+obj)
+            }
+        }
+
+ */
 }
