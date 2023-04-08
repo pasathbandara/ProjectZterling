@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/fake_news_background_image_"
+
         tools:context=".contact_us">
 
         <!-- A TextView that serves as a logo bar with a background color -->
