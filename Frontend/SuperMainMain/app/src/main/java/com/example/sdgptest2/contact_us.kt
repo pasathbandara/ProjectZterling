@@ -27,16 +27,16 @@ class contact_us : AppCompatActivity() {
 
 //toolbar
         val contnews = findViewById<android.view.View>(R.id.contnews)
-        contnews.setOnClickListener { val intent = Intent(this, ChamalDetails::class.java)
+        contnews.setOnClickListener { val intent = Intent(this, AllNews::class.java)
             startActivity(intent)}
         val contlatestnews = findViewById<android.view.View>(R.id.contlatestnews)
-        contnews.setOnClickListener { val intent = Intent(this, ChamalDetails::class.java)
+        contnews.setOnClickListener { val intent = Intent(this, FakeNews::class.java)
             startActivity(intent)}
         val contfactcheck = findViewById<android.view.View>(R.id.contfactcheck)
-        contfactcheck.setOnClickListener { val intent = Intent(this, ChamalDetails::class.java)
+        contfactcheck.setOnClickListener { val intent = Intent(this, how_we_do_it::class.java)
             startActivity(intent)}
         val contcont = findViewById<android.view.View>(R.id.contcont)
-        contcont.setOnClickListener { val intent = Intent(this, ChamalDetails::class.java)
+        contcont.setOnClickListener { val intent = Intent(this, contact_us::class.java)
             startActivity(intent)}
     }
 }

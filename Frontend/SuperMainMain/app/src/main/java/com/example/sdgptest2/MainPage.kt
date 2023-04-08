@@ -13,7 +13,6 @@ class MainPage : AppCompatActivity() {
         val burgmenu = findViewById<ImageButton>(R.id.burgmenu)
         burgmenu.setOnClickListener(){
             val Intent = Intent(this, burgerMenu::class.java)
-            println("hi")
             startActivity(Intent)
             finish()
         }
